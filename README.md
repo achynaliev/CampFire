@@ -50,6 +50,7 @@ User Profile
 ------
 * Initial project setup and authentication.
 * Looked over tutorials on the MEAN stack.
+* Finalized the look for the user profile, the user dashboard and the splash page
 
 ## Group Members & Work Breakdown
 ------
