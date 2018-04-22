@@ -7,7 +7,7 @@ var ngw = require('@ngtools/webpack');
 
 module.exports = webpackMerge.smart(commonConfig, {
     entry: {
-        'app': './assets/app/main.aot.ts'
+        'app': '.app/main.aot.ts'
     },
 
     output: {
@@ -37,7 +37,7 @@ module.exports = webpackMerge.smart(commonConfig, {
     plugins: [
     new ngw.AngularCompilerPlugin({
       tsConfigPath: './tsconfig.aot.json',
-      entryModule: './assets/app/app.module#AppModule'
+      entryModule: './app/app.module#AppModule'
     }),
         new webpack.optimize.UglifyJsPlugin({
             sourceMap: false
