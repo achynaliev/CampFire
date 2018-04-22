@@ -38,6 +38,7 @@ Some technical challenges:
 ## Wireframes
 ------
 Splash Page
+![splashPage](https://github.com/achynaliev/CampFire/blob/master/splashPage.png)
 
 Profile Dashboard
 ![profileDashboard](https://github.com/achynaliev/CampFire/blob/master/project_files/dashboard.png)
