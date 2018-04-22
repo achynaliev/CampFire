@@ -38,6 +38,7 @@ Some technical challenges:
 ## Wireframes
 ------
 Splash Page
+![splashPage](https://github.com/achynaliev/CampFire/blob/master/splashPage.png)
 
 Profile Dashboard
 ![profileDashboard](https://github.com/achynaliev/CampFire/blob/master/project_files/dashboard.png)
@@ -49,6 +50,7 @@ User Profile
 ------
 * Initial project setup and authentication.
 * Looked over tutorials on the MEAN stack.
+* Finalized the look for the user profile, the user dashboard and the splash page
 
 ## Group Members & Work Breakdown
 ------
