@@ -8,7 +8,8 @@ var schema = new Schema({
   email: {type: String, require: true, unique: true},
   phone: {type: String},
   imageUrl: {type: String},
-  passwordDigest: {type: String, require: true}
+  passwordDigest: {type: String, require: true},
+  userBio: {type: Text}
 });
 
 schema.plugin(mongooseUniqueValidator);
