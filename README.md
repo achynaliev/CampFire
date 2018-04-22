@@ -42,6 +42,9 @@ Splash Page
 Profile Dashboard
 ![profileDashboard](https://github.com/achynaliev/CampFire/blob/master/project_files/dashboard.png)
 
+User Profile
+![userProfile](https://github.com/achynaliev/CampFire/blob/master/userProfile.png)
+
 ## Accomplished over the Weekend
 ------
 * Initial project setup and authentication.
