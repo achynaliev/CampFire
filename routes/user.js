@@ -1,29 +1,30 @@
-var express = require('express');
+var express = require("express");
 var router = express.Router();
+
 var bcrypt = require('bcryptjs');
 var jwt = require('jsonwebtoken');
 
-var User = require('../models/user');
+var User = require("../models/user");
 
-router.post('/', function (req, res, next) {
-    var user = new User({
-        firstName: req.body.firstName,
-        lastName: req.body.lastName,
-        passwordDigest: bcrypt.hashSync(req.body.passwordDigest, 10),
-        email: req.body.email
+router.post("/", function(req, res, next) {
+  var user = new User({
+    firstName: req.body.firstName,
+    lastName: req.body.lastName,
+    passwordDigest: bcrypt.hashSync(req.body.passwordDigest, 10),
+    email: req.body.email
+  });
+  user.save(function(err, result) {
+    if (err) {
+      return res.status(500).json({
+        title: "An error occurred",
+        error: err
+      });
+    }
+    res.status(201).json({
+      message: "User created",
+      obj: result
     });
-    user.save(function(err, result) {
-        if (err) {
-            return res.status(500).json({
-                title: 'An error occurred',
-                error: err
-            });
-        }
-        res.status(201).json({
-            message: 'User created',
-            obj: result
-        });
-    });
+  });
 });
 
 router.post('/signin', function(req, res, next) {
