@@ -1,6 +1,7 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 var mongooseUniqueValidator = require('mongoose-unique-validator');
+var Room = require('./room');
 
 var schema = new Schema({
   firstName: {type: String, required: true},
@@ -9,7 +10,8 @@ var schema = new Schema({
   phone: {type: String},
   imageUrl: {type: String},
   passwordDigest: {type: String, required: true},
-  userBio: {type: String}
+  userBio: {type: String},
+  rooms: [{type: Schema.Types.ObjectId, ref: 'Room'}]
 });
 
 schema.plugin(mongooseUniqueValidator);
