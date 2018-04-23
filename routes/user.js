@@ -19,9 +19,11 @@ router.post('/', function (req, res, next) {
                 error: err
             });
         }
+        var token = jwt.sign({user: user}, 'secret', {expiresIn: 7200});
         res.status(201).json({
-            message: 'User created',
-            obj: result
+          message: 'Successfully logged in',
+          token: token,
+          userId: user._id
         });
     });
 });

@@ -16,7 +16,6 @@ export class SigninComponent {
 
     onSubmit() {
         const user = { email: this.myForm.value.email, passwordDigest: this.myForm.value.passwordDigest};
-        console.log(user)
         this.authService.signin(user)
             .subscribe(
                 data => {
