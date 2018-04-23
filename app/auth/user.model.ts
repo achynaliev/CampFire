@@ -4,5 +4,5 @@ export class User {
                 public email: string,
                 public phone?: string
                 public imageUrl?: string,
-                public passwordDigest: String) {}
+                public passwordDigest: string) {}
 }
