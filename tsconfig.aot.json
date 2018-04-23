@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es6",
     "module": "es2015",
     "moduleResolution": "node",
     "sourceMap": false,
@@ -13,7 +13,7 @@
     "node_modules/@types"
   ],
   "lib": [
-    "es5",
+    "es6",
     "dom"
   ],
   "angularCompilerOptions": {

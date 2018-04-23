@@ -1,5 +1,5 @@
 {
-  "name": "udemy-nodejs-angular2",
+  "name": "CampFire",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -20,6 +20,7 @@
     "@angular/platform-server": "^5.0.0",
     "@angular/router": "^5.0.0",
     "@angular/upgrade": "^5.0.0",
+    "bcryptjs": "^2.4.3",
     "body-parser": "~1.15.2",
     "cookie-parser": "~1.4.3",
     "core-js": "^2.4.1",
