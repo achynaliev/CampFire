@@ -9,6 +9,7 @@ import { ProfileModule } from './profile/profile.module';
 import { SignupComponent } from "./auth/signup.component";
 import { SigninComponent } from "./auth/signin.component";
 import { AuthService } from "./auth/auth.service";
+import { RootMainComponent } from "./rootmain/rootmain.component";
 
 import { AppComponent } from "./app.component";
 
@@ -18,7 +19,8 @@ import { AppComponent } from "./app.component";
       AuthenticationComponent,
       LogoutComponent,
       SignupComponent,
-      SigninComponent
+      SigninComponent,
+      RootMainComponent
     ],
     imports: [
       BrowserModule,
