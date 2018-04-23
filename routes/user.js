@@ -27,7 +27,6 @@ router.post('/', function (req, res, next) {
           userId: user._id
         });
     });
-  });
 });
 
 router.post('/signin', function(req, res, next) {
