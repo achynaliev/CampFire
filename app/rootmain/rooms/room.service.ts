@@ -20,8 +20,8 @@ export class RoomService {
                 let transformedMessages: Room[] = [];
                 for (let room of rooms) {
                     transformedMessages.push(new Room(
-                        message.title,
-                        message.category,
+                        room.title,
+                        room.category,
                     );
                 }
                 this.messages = transformedMessages;

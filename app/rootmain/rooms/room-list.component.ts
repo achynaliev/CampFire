@@ -4,20 +4,22 @@ import { RoomService } from "./room.service";
 import { Room } from "./room.model";
 
 @Component({
-    selector: 'app-message-list',
+    selector: 'app-room-list',
     template: `
     <div>
-      <h1>Hello</h1>
+      <app-room
+          [room]="room"
+          *ngFor="let room of rooms"></app-room>
     </div>
     `
 })
 export class RoomListComponent implements OnInit {
     rooms: Room[];
 
-    constructor(private RoomService: RoomService) {}
+    constructor(private roomService: RoomService) {}
 
     ngOnInit() {
-        this.RoomService.getRooms()
+        this.roomService.getRooms()
             .subscribe(
                 (rooms: Room[]) => {
                     this.rooms = rooms;

@@ -11,6 +11,7 @@ import { SigninComponent } from "./auth/signin.component";
 import { AuthService } from "./auth/auth.service";
 import { RootMainComponent } from "./rootmain/rootmain.component";
 import { RoomListComponent } from './rootmain/rooms/room-list.component';
+import { RoomComponent } from './rootmain/rooms/room.component';
 import { RoomService } from './rootmain/rooms/room.service';
 
 import { AppComponent } from "./app.component";
@@ -23,7 +24,8 @@ import { AppComponent } from "./app.component";
       SignupComponent,
       SigninComponent,
       RootMainComponent,
-      RoomListComponent
+      RoomListComponent,
+      RoomComponent
     ],
     imports: [
       BrowserModule,

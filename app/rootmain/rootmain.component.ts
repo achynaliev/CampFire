@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
-import { MessageListComponent } from './rooms/room-list.component';
+import { RoomListComponent } from './rooms/room-list.component';
 
 @Component({
   selector: 'cf-rootmain',
@@ -10,7 +10,7 @@ import { MessageListComponent } from './rooms/room-list.component';
       <div class="user-stats">
       </div>
       <div class="rooms-list">
-      <app-message-list></app-message-list>
+      <app-room-list></app-room-list>
       </div>
     </section>
     <section class="main-page-body">
