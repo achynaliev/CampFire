@@ -11,8 +11,8 @@ export class RoomService {
     }
 
     getRooms() {
-        const userId = localStorage.getItem('userId');
-        let params = {userId}
+        const currentUser = localStorage.getItem('currentUser');
+        var user = JSON.parse(currentUser);
         const headers = new Headers({'Content-Type': 'application/json'});
         return this.http.get('http://localhost:3000/room')
             .map((response: Response) => {
@@ -22,7 +22,7 @@ export class RoomService {
                     transformedMessages.push(new Room(
                         room.title,
                         room.category,
-                    );
+                    ));
                 }
                 this.messages = transformedMessages;
                 return transformedMessages;
