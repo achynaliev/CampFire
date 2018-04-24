@@ -1,0 +1,31 @@
+<!-- <div class="bg-dark navbar-dark position-fixed" data-sticky="top">
+  <div class="container">
+    <nav class="navbar navbar-preview fixed-top">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">CampFire</a>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="active" routerLinkActive="active" *ngIf="!isLoggedIn()"><a [routerLink]="['signup']">Signup</a></li>
+        <li routerLinkActive="active" *ngIf="!isLoggedIn()"><a [routerLink]="['signin']">Signin</a></li>
+        <li routerLinkActive="active" *ngIf="isLoggedIn()"><a [routerLink]="['logout']">Logout</a></li>
+      </ul>
+    </nav>
+  </div>
+</div> -->
+
+
+<nav class="navbar navbar-default navigation-clean-button">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">CampFire</a>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+      <li class="active" routerLinkActive="active" *ngIf="!isLoggedIn()"><a [routerLink]="['signup']">Signup</a></li>
+      <li routerLinkActive="active" *ngIf="!isLoggedIn()"><a [routerLink]="['signin']">Signin</a></li>
+      <li routerLinkActive="active" *ngIf="isLoggedIn()"><a [routerLink]="['logout']">Logout</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="row spacing">
+   <router-outlet></router-outlet>
+</div>

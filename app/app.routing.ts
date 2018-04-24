@@ -1,5 +1,5 @@
 import { Routes, RouterModule } from "@angular/router";
-import { AuthenticationComponent } from "./auth/authentication.component";
+import { AuthenticationComponent } from "./auth/header/authentication.component";
 import { AUTH_ROUTES } from "./auth/auth.routes";
 import { RootMainComponent } from "./rootmain/rootmain.component";
 import { RootMainRoutes } from "./rootmain/rootmain.routes";
