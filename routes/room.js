@@ -7,7 +7,7 @@ var Room = require('../models/room');
 
 router.get('/room', function (req, res, next) {
     // console.log(req.query.search);
-    Room.find({users: `${req.query.search}`})
+    Room.find({})
         .exec(function (err, rooms) {
           res.status(200).json({
               message: 'Success',
