@@ -139,3 +139,12 @@ body {
         font-size: 42px;
     }
 }
+
+
+/* modal */
+
+.modal-footer {
+    padding: 15px;
+    text-align: right;
+    border-top: none;
+}
