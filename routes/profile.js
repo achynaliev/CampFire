@@ -22,7 +22,7 @@ router.get('/:username', function(req, res, next) {
       if (!user) {
         return res.status(401).json({message: 'No user found'});
       }
-      return res.json({profile: User.profileJSON(false)});
+      return res.json({profile: User.profileJSON(user)});
     });
   } else {
     return res.status(401).json({message: 'No user found'});
