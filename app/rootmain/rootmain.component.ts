@@ -8,17 +8,23 @@ import { RoomListComponent } from './rooms/room-list.component';
   <div class="main-page-parent-div">
     <section class="user-stats-rooms-list">
       <div class="user-stats">
+      <h1>User Stats</h1>
       </div>
       <div class="rooms-list">
       <app-room-list></app-room-list>
       </div>
     </section>
     <section class="main-page-body">
-      <div>
+      <div class="main-nav-bar">
+        <h2>I am nav bar</h2>
+      </div>
+      <div class="chats-main">
+        <h2>Chat and other shit will go here</h2>
       </div>
     </section>
   </div>
-  `
+  `,
+  styleUrls: ['./rootmain.component.css']
 })
 
 export class RootMainComponent implements OnInit {

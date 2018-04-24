@@ -1,0 +1,42 @@
+.main-page-parent-div {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+}
+
+.user-stats-rooms-list {
+  display: flex;
+  flex-direction: column;
+  width: 10%;
+  height: 100vw;
+  border-right: solid lightgray 1px;
+}
+
+.user-stats {
+  width: 100%;
+  height: 50px;
+  border-bottom: solid lightgray 1px;
+}
+
+.rooms-list {
+  width: 100%;
+}
+
+
+.main-page-body {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+
+.main-nav-bar {
+  height: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border-bottom: solid lightgray 1px;
+}
+
+.chats-main {
+  width: 100%;
+}
