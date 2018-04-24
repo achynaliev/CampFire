@@ -32,7 +32,7 @@ export class RootMainComponent implements OnInit {
 
   ngOnInit() {
     if (localStorage.getItem('token') == null) {
-      this.router.navigate(['/welcome', 'signin']);
+      this.router.navigate(['/welcome']);
     }
   }
 }
