@@ -6,8 +6,7 @@ var Category = require('./category');
 
 var schema = new Schema({
   title: {type: String, required: true},
-  category: {type: Schema.Types.ObjectId, ref: 'Category'},
-  users: [{type: Schema.Types.ObjectId, ref: 'User'}]
+  category: {type: Schema.Types.ObjectId, ref: 'Category'}
 });
 
 schema.plugin(mongooseUniqueValidator);

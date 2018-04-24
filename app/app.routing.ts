@@ -6,7 +6,7 @@ import { RootMainRoutes } from "./rootmain/rootmain.routes";
 
 const APP_ROUTES: Routes = [
     { path: '', component: RootMainComponent, children: RootMainRoutes },
-    { path: 'welcome', component: AuthenticationComponent, children: AUTH_ROUTES }
+    { path: 'welcome', component: AuthenticationComponent, children: AUTH_ROUTES },
 ];
 
 export const routing = RouterModule.forRoot(APP_ROUTES);

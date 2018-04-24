@@ -10,6 +10,7 @@ router.post('/', function (req, res, next) {
     var user = new User({
         firstName: req.body.firstName,
         lastName: req.body.lastName,
+        username: req.body.username,
         passwordDigest: bcrypt.hashSync(req.body.passwordDigest, 10),
         email: req.body.email
     });
@@ -24,7 +25,8 @@ router.post('/', function (req, res, next) {
         res.status(201).json({
           message: 'Successfully logged in',
           token: token,
-          userId: user._id
+          currentUser: {userId: user._id, 'firstName': user.firstName, lastName: user.lastName,
+                email: user.email, imageUrl: user.imageUrl, userBio: user.userBio}
         });
     });
 });
@@ -53,7 +55,8 @@ router.post('/signin', function(req, res, next) {
         res.status(200).json({
             message: 'Successfully logged in',
             token: token,
-            userId: user._id
+            currentUser: {userId: user._id, firstName: user.firstName, lastName: user.lastName,
+                  email: user.email, imageUrl: user.imageUrl, userBio: user.userBio}
         });
     });
 });

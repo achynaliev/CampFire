@@ -10,6 +10,9 @@ import { SignupComponent } from "./auth/header/signup.component";
 import { SigninComponent } from "./auth/header/signin.component";
 import { AuthService } from "./auth/header/auth.service";
 import { RootMainComponent } from "./rootmain/rootmain.component";
+import { RoomListComponent } from './rootmain/rooms/room-list.component';
+import { RoomComponent } from './rootmain/rooms/room.component';
+import { RoomService } from './rootmain/rooms/room.service';
 
 import { AppComponent } from "./app.component";
 
@@ -20,7 +23,9 @@ import { AppComponent } from "./app.component";
       LogoutComponent,
       SignupComponent,
       SigninComponent,
-      RootMainComponent
+      RootMainComponent,
+      RoomListComponent,
+      RoomComponent
     ],
     imports: [
       BrowserModule,
@@ -30,7 +35,7 @@ import { AppComponent } from "./app.component";
       ReactiveFormsModule,
       HttpModule
     ],
-    providers: [AuthService],
+    providers: [AuthService, RoomService],
     bootstrap: [AppComponent]
 })
 export class AppModule {

@@ -20,7 +20,7 @@ export class SigninComponent {
             .subscribe(
                 data => {
                     localStorage.setItem('token', data.token);
-                    localStorage.setItem('userId', data.userId);
+                    localStorage.setItem('currentUser', JSON.stringify(data.currentUser));
                     this.router.navigateByUrl('/');
                 },
                 error => console.error(error)
