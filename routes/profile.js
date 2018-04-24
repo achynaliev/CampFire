@@ -18,17 +18,14 @@ router.param('username', function(req, res, next, username) {
 
 router.get('/:username', function(req, res, next) {
   if (req.profile) {
-    // console.log(req.profile);
-    // return res.json({profile: User.profileJSON(req.profile)});
     User.findOne({ username: req.profile.username}).then(user => {
-      console.log(user);
       if (!user) {
-        return res.json({profile: req.profile.profileJSON(false)});
+        return res.status(401).json({message: 'No user found'});
       }
-      return res.json({profile: User.profileJSON(user)});
+      return res.json({profile: User.profileJSON(false)});
     });
   } else {
-    return res.json({profile: req.profile.profileJSON(false)});
+    return res.status(401).json({message: 'No user found'});
   }
 })
 
