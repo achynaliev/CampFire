@@ -3,7 +3,7 @@ import { Router } from "@angular/router";
 import { FormGroup, FormControl, Validators } from "@angular/forms";
 
 import { AuthService } from "./auth.service";
-import { User } from "./user.model";
+import { User } from "../user.model";
 
 @Component({
     selector: 'app-signup',
