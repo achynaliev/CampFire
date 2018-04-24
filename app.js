@@ -9,6 +9,7 @@ var mongoose = require('mongoose');
 var appRoutes = require('./routes/app');
 var userRoutes = require('./routes/user');
 var roomRoutes = require('./routes/room');
+var profileRoutes = require('./routes/profile');
 
 var app = express();
 mongoose.connect('mongodb://localhost:27017/firecamp');
@@ -34,6 +35,7 @@ app.use(function(req, res, next) {
 
 app.use('/', roomRoutes);
 app.use('/user', userRoutes);
+app.use('/profile', profileRoutes);
 app.use('/', appRoutes);
 
 

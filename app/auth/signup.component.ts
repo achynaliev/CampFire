@@ -18,6 +18,7 @@ export class SignupComponent implements OnInit {
         const user = new User(
             this.myForm.value.firstName,
             this.myForm.value.lastName,
+            this.myForm.value.username,
             this.myForm.value.email,
             null,
             null,
@@ -28,7 +29,7 @@ export class SignupComponent implements OnInit {
             .subscribe(
               data => {
                   localStorage.setItem('token', data.token);
-                  localStorage.setItem('currentUser', JSON.stringify(data.currentUser));
+                  localStorage.setItem('userId', data.userId);
                   this.router.navigateByUrl('/');
               },
               error => console.error(error)
@@ -40,6 +41,7 @@ export class SignupComponent implements OnInit {
         this.myForm = new FormGroup({
             firstName: new FormControl(null, Validators.required),
             lastName: new FormControl(null, Validators.required),
+            username: new FormControl(null, Validators.required),
             email: new FormControl(null, [
                 Validators.required,
                 Validators.pattern("[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?")

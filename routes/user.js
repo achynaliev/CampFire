@@ -10,6 +10,7 @@ router.post('/', function (req, res, next) {
     var user = new User({
         firstName: req.body.firstName,
         lastName: req.body.lastName,
+        username: req.body.username,
         passwordDigest: bcrypt.hashSync(req.body.passwordDigest, 10),
         email: req.body.email
     });
