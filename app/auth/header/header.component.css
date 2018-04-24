@@ -1,6 +1,9 @@
-body {
-  font-family: 'Montserrat', sans-serif;
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+    color: white;
+    background-color: transparent;
 }
+
 
 .header-nightsky {
   color: white;
@@ -21,6 +24,45 @@ body {
   font-weight: bold;
   font-size: 60px;
   margin-bottom: 36px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.header-nightsky .navbar-nav>li>a {
+  color: white;
+  font-size: 18px;
+}
+
+.nav > li > a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+}
+
+.navbar-nav > li > a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 20px;
+}
+
+.header-nightsky .hero p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 22px;
+  max-width: 660px;
+  margin 0 auto 20px;
+  font-weight: normal;
+  line-height: 1.5;
+}
+
+.header-nightsky .btn-primary {
+    color: #fff;
+    background-color: transparent;
+    border-color: #fffbfb !important;
+    outline: none;
+    margin-right: 20px;
+    margin-top: 20px;
+    font-size: 24px;
+    padding: 18px 24px;
+    transition: 0.2s background-color;
 }
 
 header {
@@ -31,6 +73,8 @@ header {
 .navbar {
   position: relative;
   min-height: 50px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
 }
 
 .header-nightsky .navbar {
@@ -55,10 +99,6 @@ header {
 .nav {
   padding-left: 0;
   list-style: none;
-}
-
-ul {
-  display: block;
 }
 
 .container {
@@ -91,4 +131,10 @@ ul {
 
 @media screen and (max-width: 767px) .header-nightsky .hero h1 {
   font-size: 42px;
+}
+
+@media (min-width: 768px)
+.navbar-nav>li>a {
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
