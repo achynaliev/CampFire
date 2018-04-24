@@ -15,9 +15,9 @@
                 </div>
                 <div class="collapse navbar-collapse" id="navbar">
                     <ul class="nav navbar-nav navbar-right">
-                        <li routerLinkActive="active" *ngIf="!isLoggedIn()" data-toggle="modal" data-target="#signupModal"><a [routerLink]="['signup']">Signup</a></li>
-                        <li routerLinkActive="active" *ngIf="!isLoggedIn()" data-toggle="modal" data-target="#signinModal"><a [routerLink]="['signin']">Signin</a></li>
-                        <li routerLinkActive="active" *ngIf="isLoggedIn()"><a [routerLink]="['logout']">Logout</a></li>
+                        <li routerLinkActive="active" *ngIf="!isLoggedIn()" data-toggle="modal" data-target="#signupModal"><a>Signup</a></li>
+                        <li routerLinkActive="active" *ngIf="!isLoggedIn()" data-toggle="modal" data-target="#signinModal"><a>Signin</a></li>
+                        <li routerLinkActive="active" *ngIf="isLoggedIn()"><app-logout>Logout</app-logout></li>
                     </ul>
                 </div>
             </div>
@@ -30,9 +30,9 @@
         </div>
     </div>
 
-    <!-- <div class="row spacing">
+    <div class="row spacing">
       <router-outlet></router-outlet>
-    </div> -->
+    </div>
 </body>
 
 
