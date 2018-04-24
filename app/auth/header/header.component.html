@@ -1,21 +1,5 @@
-<!-- <div class="bg-dark navbar-dark position-fixed" data-sticky="top">
+<!-- <nav class="navbar navbar-default">
   <div class="container">
-    <nav class="navbar navbar-preview fixed-top">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="#">CampFire</a>
-      </div>
-      <ul class="nav navbar-nav navbar-right">
-        <li class="active" routerLinkActive="active" *ngIf="!isLoggedIn()"><a [routerLink]="['signup']">Signup</a></li>
-        <li routerLinkActive="active" *ngIf="!isLoggedIn()"><a [routerLink]="['signin']">Signin</a></li>
-        <li routerLinkActive="active" *ngIf="isLoggedIn()"><a [routerLink]="['logout']">Logout</a></li>
-      </ul>
-    </nav>
-  </div>
-</div> -->
-
-
-<nav class="navbar navbar-default navigation-clean-button">
-  <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="#">CampFire</a>
     </div>
@@ -25,7 +9,35 @@
       <li routerLinkActive="active" *ngIf="isLoggedIn()"><a [routerLink]="['logout']">Logout</a></li>
     </ul>
   </div>
-</nav>
+</nav> -->
+
+
+<body>
+  <div class="header-nightsky">
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <a class="navbar-brand" href="#">LOGO</a>
+        <div class="navbar-header navbar-right">
+          <li class="active" routerLinkActive="active" *ngIf="!isLoggedIn()"><a [routerLink]="['signup']">Signup</a></li>
+          <li routerLinkActive="active" *ngIf="!isLoggedIn()"><a [routerLink]="['signin']">Signin</a></li>
+          <li routerLinkActive="active" *ngIf="isLoggedIn()"><a [routerLink]="['logout']">Logout</a></li>
+        </div>
+      </div>
+    </nav>
+    <div class="hero">
+      <h1>This is a bootstrap header</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+      <div class="btn btn-primary">
+        Learn more about us
+      </div>
+    </div>
+  </div>
+</body>
+
+
+
 <div class="row spacing">
    <router-outlet></router-outlet>
 </div>

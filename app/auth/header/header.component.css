@@ -1,0 +1,94 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.header-nightsky {
+  color: white;
+  background: url(https://images.pexels.com/photos/776113/pexels-photo-776113.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+  background-size: cover;
+  padding-bottom: 100px;
+  background-position: 100% 7%;
+}
+
+.header-nightsky .hero {
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 100px;
+}
+
+.header-nightsky .hero h1 {
+  color: white;
+  font-weight: bold;
+  font-size: 60px;
+  margin-bottom: 36px;
+}
+
+header {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.navbar {
+  position: relative;
+  min-height: 50px;
+}
+
+.header-nightsky .navbar {
+  margin-bottom: 0px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 100%;
+  border-bottom: none;
+  background-color: transparent;
+  min-width: 300px;
+  border: none;
+}
+
+.header-nightsky .navbar-nav {
+  margin-top: 12px;
+}
+
+.navbar-nav {
+  margin: 7.5px -15px;
+}
+
+.nav {
+  padding-left: 0;
+  list-style: none;
+}
+
+ul {
+  display: block;
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.header-nightsky .navbar-brand {
+  color: white;
+  font-size: 50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+
+.navbar-brand {
+  float: left;
+  height: 50px;
+  padding: 15px 15px;
+  line-height: 20px;
+}
+
+@media screen and (max-width: 767px) .header-nightsky .hero {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+
+@media screen and (max-width: 767px) .header-nightsky .hero h1 {
+  font-size: 42px;
+}
