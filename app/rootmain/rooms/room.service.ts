@@ -15,6 +15,18 @@ export class RoomService {
         let params = {userId}
         const headers = new Headers({'Content-Type': 'application/json'});
         return this.http.get('http://localhost:3000/room')
-            .map(result => console.log(result));
+            .map((response: Response) => {
+                const rooms = response.json().obj;
+                let transformedMessages: Room[] = [];
+                for (let room of rooms) {
+                    transformedMessages.push(new Room(
+                        message.title,
+                        message.category,
+                    );
+                }
+                this.messages = transformedMessages;
+                return transformedMessages;
+            })
+            .catch((error: Response) => Observable.throw(error.json()));
     }
 }
