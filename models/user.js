@@ -17,14 +17,16 @@ var schema = new Schema({
 
 schema.plugin(mongooseUniqueValidator);
 
-schema.methods.profileJSON = (user) = ({
-  firstName: this.firstName,
-  lastName: this.lastName,
-  username: this.username,
-  email: this.email,
-  phone: this.phone,
-  imageUrl: this.imageUrl,
-  userBio: this.userBio
-});
+schema.statics.profileJSON = function(user){
+  return {
+    firstName: user.firstName,
+    lastName: user.lastName,
+    username: user.username,
+    email: user.email,
+    phone: user.phone,
+    imageUrl: user.imageUrl,
+    userBio: user.userBio
+  };
+};
 
 module.exports = mongoose.model('User', schema);
