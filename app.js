@@ -10,6 +10,7 @@ var appRoutes = require('./routes/app');
 var userRoutes = require('./routes/user');
 var roomRoutes = require('./routes/room');
 var profileRoutes = require('./routes/profile');
+var searchRoutes = require('./routes/search');
 
 var app = express();
 mongoose.connect('mongodb://localhost:27017/firecamp');
@@ -33,7 +34,8 @@ app.use(function(req, res, next) {
   next();
 });
 
-app.use('/', roomRoutes);
+app.use('/search', searchRoutes);
+app.use('/room', roomRoutes);
 app.use('/user', userRoutes);
 app.use('/profile', profileRoutes);
 app.use('/', appRoutes);
