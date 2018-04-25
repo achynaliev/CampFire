@@ -9,14 +9,20 @@
           alt="profile-pic">
       </div>
       <div class="profile-banner-content-body">
-        <h1>Clay Jannon {{profile.username}}</h1>
-        <button>Message</button>
+        <h1>{{profile.firstName}} {{profile.lastName}}</h1>
+        <ul>
+          <li>Email: {{profile.email}}</li>
+          <li>Image Url: {{profile.imageUrl}}</li>
+          <li>Bio: {{profile.userBio}}</li>
+          <li>Phone: {{profile.phone}}</li>
+        </ul>
+
       </div>
     </div>
   </div>
 
   <div class="summary">
-
+    {{profile.userBio}}
   </div>
 
   <div class="project"></div>
