@@ -16,18 +16,16 @@ export class ProfileComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private ProfileService: ProfileService,
+    private profileService: ProfileService,
     private location: Location
   ) {}
 
   ngOnInit() {
-    console.log(this.getProfile());
-  }
-
-  getProfile(): void {
-    const username = this.route.snapshot.paramMap.get('username');
-    this.ProfileService.getProfile(username)
-          .subscribe(profile => this.profile = profile);
+    this.route.data.subscribe(
+      (data: {profile: Profile}) => {
+        this.profile = data.profile;
+      }
+    );
   }
 
   goBack(): void {

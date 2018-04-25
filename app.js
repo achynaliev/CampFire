@@ -35,7 +35,7 @@ app.use(function(req, res, next) {
 
 app.use('/', roomRoutes);
 app.use('/user', userRoutes);
-app.use('/profile', profileRoutes);
+app.use('/profiles', profileRoutes);
 app.use('/', appRoutes);
 
 
