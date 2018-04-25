@@ -1,10 +1,10 @@
-.header-nightsky .navbar-nav>li>a {
+ .navbar-nav>li>a {
     color: white;
     font-size: 18px;
     border-radius: 10px;
 }
 
-.header-nightsky .navbar {
+ .navbar {
     margin-bottom: 0px;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -13,62 +13,63 @@
     background-color: transparent;
     min-width: 300px;
     border: none;
+    background: black;
 }
 
-.header-nightsky .navbar-default .navbar-nav>.open>a,
-.header-nightsky .navbar-default .navbar-nav>.open>a:focus,
-.header-nightsky .navbar-default .navbar-nav>.open>a:hover {
+ .navbar-default .navbar-nav>.open>a,
+ .navbar-default .navbar-nav>.open>a:focus,
+ .navbar-default .navbar-nav>.open>a:hover {
     color: #ccc;
     background-color: transparent;
 }
 
-.header-nightsky .nav>li>a:focus,
-.header-nightsky .nav>li>a:hover {
+ .nav>li>a:focus,
+ .nav>li>a:hover {
     color: #ccc;
     background-color: transparent;
 }
 
-.header-nightsky .navbar-nav>li {
+ .navbar-nav>li {
     margin-right: 20px;
 }
 
-.header-nightsky .navbar-nav {
+ .navbar-nav {
    margin-top: 12px;
 }
 
-.header-nightsky .navbar-toggle {
+ .navbar-toggle {
     background-color: transparent !important;
     margin-top: 20px;
     border: 1px solid #fff;
 }
 
-.header-nightsky .navbar-toggle .icon-bar {
+ .navbar-toggle .icon-bar {
     background-color: white;
 }
 
-.header-nightsky .navbar-brand {
+ .navbar-brand {
     color: white;
     font-size: 50px;
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
-.header-nightsky .navbar-brand:hover {
+ .navbar-brand:hover {
     color: #ccc;
 }
 
 @media screen and (max-width: 767px) {
 
-    .header-nightsky .navbar-default .navbar-nav .open .dropdown-menu>li>a{
+     .navbar-default .navbar-nav .open .dropdown-menu>li>a{
         color: #fff;
         font-size: 16px;
     }
 
-    .header-nightsky .navbar-default .navbar-nav .open .dropdown-menu>li>a:hover{
+     .navbar-default .navbar-nav .open .dropdown-menu>li>a:hover{
         color: #ccc;
     }
 
-    .header-nightsky .navbar-collapse {
+     .navbar-collapse {
         margin-left: 20px;
         border-top: none;
         box-shadow: none;
