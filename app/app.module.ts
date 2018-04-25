@@ -13,7 +13,7 @@ import { RootMainComponent } from "./rootmain/rootmain.component";
 import { RoomListComponent } from './rootmain/rooms/room-list.component';
 import { RoomComponent } from './rootmain/rooms/room.component';
 import { RoomService } from './rootmain/rooms/room.service';
-
+import { NavbarComponent } from './navbar/navbar.component';
 import { AppComponent } from "./app.component";
 
 @NgModule({
@@ -25,7 +25,8 @@ import { AppComponent } from "./app.component";
       SigninComponent,
       RootMainComponent,
       RoomListComponent,
-      RoomComponent
+      RoomComponent,
+      NavbarComponent
     ],
     imports: [
       BrowserModule,

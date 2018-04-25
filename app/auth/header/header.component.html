@@ -30,8 +30,26 @@
         </div>
     </div>
 
-    <div class="row spacing">
-      <router-outlet></router-outlet>
+    <div class="container features">
+      <div class="row">
+        <div class="col-lg-4 description-content">
+          <img class="rounded-picture" src="https://images.pexels.com/photos/160107/pexels-photo-160107.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
+          <h2>Heading</h2>
+          <p>content</p>
+        </div>
+        <div class="col-lg-4 description-content">
+          <img class="rounded-picture"
+          src="https://images.pexels.com/photos/160107/pexels-photo-160107.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
+          <h2>Heading</h2>
+          <p>content</p>
+        </div>
+        <div class="col-lg-4 description-content">
+          <img class="rounded-picture"
+          src="https://images.pexels.com/photos/160107/pexels-photo-160107.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
+          <h2>Heading</h2>
+          <p>content</p>
+        </div>
+      </div>
     </div>
 </body>
 
@@ -39,7 +57,7 @@
 <!-- signupModal -->
 
 <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
+  <div class="modal-dialog" role="document" aria-hidden="true">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Sign Up</h5>
@@ -56,12 +74,10 @@
   </div>
 </div>
 
-
-
 <!-- signinModal -->
 
 <div class="modal fade" id="signinModal" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-dialog" role="document">
+  <div class="modal-dialog" role="document" aria-hidden="true">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Sign In</h5>

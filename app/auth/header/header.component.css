@@ -1,13 +1,14 @@
 body {
-    font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .header-nightsky {
     color: white;
-      background-image: url(https://images.pexels.com/photos/776113/pexels-photo-776113.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+    background-image: url(https://images.pexels.com/photos/776113/pexels-photo-776113.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
     background-size: cover;
     background-position: bottom;
     padding-bottom: 100px;
+    margin-bottom: 80px;
 }
 
 .header-nightsky .navbar-nav>li>a {
@@ -110,7 +111,7 @@ body {
 }
 
 .header-nightsky .btn-primary:active {
-    /* transform:translateY(1px); */
+    transform:translateY(1px);
 }
 
 @media screen and (max-width: 767px) {
@@ -147,4 +148,44 @@ body {
     padding: 15px;
     text-align: right;
     border-top: none;
+}
+
+
+/* circular description */
+
+.rounded-picture {
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+}
+
+.description-content h2 {
+  font-size: 2rem;
+}
+
+@media (min-width: 576px) .container {
+  max-width: 540px;
+}
+
+/* @media (min-width: 1200px)
+.container {
+    max-width: 1140px;
+} */
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+.col-lg-4 {
+  margin-bottom: 1.5em;
+  text-align: center;
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
 }
