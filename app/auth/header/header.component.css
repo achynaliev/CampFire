@@ -8,7 +8,7 @@ body {
     background-size: cover;
     background-position: bottom;
     padding-bottom: 100px;
-    margin-bottom: 80px;
+    margin-bottom: 20px;
 }
 
 .header-nightsky .navbar-nav>li>a {
@@ -155,8 +155,8 @@ body {
 
 .rounded-picture {
   border-radius: 50%;
-  width: 250px;
-  height: 250px;
+  width: 230px;
+  height: 230px;
 }
 
 .description-content h2 {
@@ -172,13 +172,13 @@ body {
     max-width: 1140px;
 } */
 
-.container {
+/* .container {
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 120px;
+  padding-left: 120px;
   margin-right: auto;
   margin-left: auto;
-}
+} */
 
 
 .col-lg-4 {
@@ -188,4 +188,27 @@ body {
   min-height: 1px;
   padding-right: 15px;
   padding-left: 15px;
+}
+
+.row {
+  margin-bottom: 80px;
+  margin-top: 70px;
+}
+
+/* featurettes */
+
+.featurette-image {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.featurette-heading {
+  font-variant: 300;
+  line-height: 1;
+  letter-spacing: -.05rem;
+}
+
+@media (min-width: 40em) .featurette-heading {
+  font-size: 50px;
 }

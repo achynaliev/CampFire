@@ -2,6 +2,8 @@
     color: white;
     font-size: 18px;
     border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
 }
 
  .navbar {
@@ -13,7 +15,11 @@
     background-color: transparent;
     min-width: 300px;
     border: none;
-    background: black;
+    background-color: #EA6762;
+}
+
+.navbar-brand {
+  font-family: 'Montserrat', sans-serif;
 }
 
  .navbar-default .navbar-nav>.open>a,

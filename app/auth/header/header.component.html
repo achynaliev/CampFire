@@ -1,27 +1,6 @@
-<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-
 <body>
     <div class="header-nightsky">
-        <nav class="navbar">
-            <div class="container">
-                <a class="navbar-brand" href="#">LOGO</a>
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar"
-                    aria-controls="myNavbar" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
-                <div class="collapse navbar-collapse" id="navbar">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li routerLinkActive="active" *ngIf="!isLoggedIn()" data-toggle="modal" data-target="#signupModal"><a>Signup</a></li>
-                        <li routerLinkActive="active" *ngIf="!isLoggedIn()" data-toggle="modal" data-target="#signinModal"><a>Signin</a></li>
-                        <li routerLinkActive="active" *ngIf="isLoggedIn()"><app-logout>Logout</app-logout></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        <app-navbar></app-navbar>
         <div class="hero">
             <h1>CampFire</h1>
             <p>CampF</p>
@@ -30,27 +9,87 @@
         </div>
     </div>
 
-    <div class="container features">
+    <div class="container">
       <div class="row">
         <div class="col-lg-4 description-content">
           <img class="rounded-picture" src="https://images.pexels.com/photos/160107/pexels-photo-160107.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
-          <h2>Heading</h2>
-          <p>content</p>
+          <h2>Build Community</h2>
+          <p>Connect with other bootcamp grads!</p>
         </div>
         <div class="col-lg-4 description-content">
           <img class="rounded-picture"
           src="https://images.pexels.com/photos/160107/pexels-photo-160107.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
-          <h2>Heading</h2>
-          <p>content</p>
+          <h2>Find others with similar interests</h2>
+          <p>Collaborate on new ideas/projects!</p>
         </div>
         <div class="col-lg-4 description-content">
           <img class="rounded-picture"
           src="https://images.pexels.com/photos/160107/pexels-photo-160107.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
-          <h2>Heading</h2>
-          <p>content</p>
+          <h2>Find companies</h2>
+          <p>Showcase your skills and get hired!</p>
         </div>
       </div>
+      <hr class="featurette-divider" />
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">
+            First feature heading.
+            <span class="text-muted">It'll blow your mind.</span>
+          </h2>
+          <p class="lead">
+            Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
+          </p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-fluid mx-auto" src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" data-holder-rendered="true" />
+        </div>
+      </div>
+      <hr class="featurette-divider" />
+      <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+          <h2 class="featurette-heading">
+            Oh yeah, it's that good
+            <span class="text-muted">See for yourself.</span>
+          </h2>
+          <p class="lead">
+            Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
+          </p>
+        </div>
+        <div class="col-md-5 order-md-1">
+          <img class="featurette-image img-fluid mx-auto"
+          src="https://images.pexels.com/photos/712521/pexels-photo-712521.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" data-holder-rendered="true" />
+        </div>
+      </div>
+      <hr class="featurette-divider" />
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">
+            And lastly, this one.
+            <span class="text-muted">Checkmate</span>
+          </h2>
+          <p class="lead">
+            Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
+          </p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-fluid mx-auto"
+          src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" data-holder-rendered="true" />
+        </div>
+      </div>
+      <hr class="featurette-divider" />
+      <footer class="container">
+        <p class="float-right">
+          <a href="#">Back to top</a>
+        </p>
+        <p>
+          © 2017-2018 CampFire
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+        </p>
+      </footer>
     </div>
+
+
 </body>
 
 
