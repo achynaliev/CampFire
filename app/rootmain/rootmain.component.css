@@ -31,14 +31,6 @@
   width: 90%;
 }
 
-.main-nav-bar {
-  height: 40px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  border-bottom: solid gray 0.5px;
-}
-
 .chats-main {
   width: 100%;
 }

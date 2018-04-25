@@ -4,22 +4,27 @@
     border-radius: 10px;
     font-family: 'Montserrat', sans-serif;
     cursor: pointer;
+    padding-top: 1px;
 }
 
  .navbar {
     margin-bottom: 0px;
     padding-top: 20px;
     padding-bottom: 20px;
-    width: 100%;
+    width: 100vw;
     border-bottom:none;
     background-color: transparent;
     min-width: 300px;
     border: none;
-    background-color: #EA6762;
+    background-color: #454545;
+    height: 60px;
+    border-radius: 0;
 }
 
 .navbar-brand {
   font-family: 'Montserrat', sans-serif;
+  margin-top: 0 !important;
+  padding-top: 1px;
 }
 
  .navbar-default .navbar-nav>.open>a,
@@ -40,7 +45,7 @@
 }
 
  .navbar-nav {
-   margin-top: 12px;
+   /* margin-top: 12px; */
 }
 
  .navbar-toggle {
