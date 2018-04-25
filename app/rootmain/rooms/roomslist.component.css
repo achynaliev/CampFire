@@ -1,0 +1,7 @@
+.rooms-list-index {
+  display: flex;
+  flex-direction: column;
+  background-color: #EA6762;
+  height: 100%;
+  color: black;
+}

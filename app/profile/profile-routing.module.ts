@@ -2,9 +2,16 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { ProfileComponent } from './profile.component';
+import { ProfileResolver } from './profile-resolver.service';
 
 export const profileRoutes: Routes = [
-  { path: 'profile', component: ProfileComponent }
+  {
+    path: 'profile/:username',
+    component: ProfileComponent,
+    resolve: {
+      profile: ProfileResolver
+    }
+  }
 ];
 
 @NgModule({
@@ -13,6 +20,7 @@ export const profileRoutes: Routes = [
   ],
   exports: [
     RouterModule
-  ]
+  ],
+  providers: [ProfileResolver]
 })
 export class ProfileRoutingModule {}

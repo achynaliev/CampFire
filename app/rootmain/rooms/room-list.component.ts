@@ -6,12 +6,13 @@ import { Room } from "./room.model";
 @Component({
     selector: 'app-room-list',
     template: `
-    <div>
+    <div class="rooms-list-index">
       <app-room
           [room]="room"
           *ngFor="let room of rooms"></app-room>
     </div>
-    `
+    `,
+    styleUrls: ['./roomslist.component.css']
 })
 export class RoomListComponent implements OnInit {
     rooms: Room[];

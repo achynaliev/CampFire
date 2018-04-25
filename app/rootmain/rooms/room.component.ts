@@ -6,20 +6,7 @@ import { RoomService } from "./room.service";
 @Component({
     selector: 'app-room',
     templateUrl: './room.component.html',
-    styles: [`
-        .author {
-            display: inline-block;
-            font-style: italic;
-            font-size: 12px;
-            width: 80%;
-        }
-        .config {
-            display: inline-block;
-            text-align: right;
-            font-size: 12px;
-            width: 19%;
-        }
-    `]
+    styleUrls: ['./roomslistitem.component.css']
 })
 export class RoomComponent {
     @Input() room: Room;

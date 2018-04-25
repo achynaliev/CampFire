@@ -11,7 +11,7 @@ export class ProfileService {
 
   getProfile(username: string): Observable<Profile> {
     const headers = new Headers({'Content-Type': 'application/json'});
-    return this.http.get(`http://localhost:3000/profile/${username}`, {headers: headers})
+    return this.http.get(`http://localhost:3000/profiles/${username}`, {headers: headers})
         .map((response: Response) => response.json())
         .catch((error: Response) => Observable.throw(error.json()));
   }
