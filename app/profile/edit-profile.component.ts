@@ -18,6 +18,10 @@ export class EditProfileComponent implements OnInit {
 
   onSubmit() {
       const profile = new Profile(
+          "",
+          "",
+          "updated",
+          "",
           this.myForm.value.imageUrl,
           this.myForm.value.userBio,
           this.myForm.value.location,

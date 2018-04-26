@@ -30,8 +30,34 @@ router.get('/:username', function(req, res, next) {
 });
 
 router.put('/:username', function(req, res, next) {
-  User.findOne({ username: req.user.username}).then(user => {
-    req.user.save().then(user => {
+  User.findOne({ username: req.body.username}).then(user => {
+    if(!user){ return res.sendStatus(401); }
+
+    if (typeof req.body.imageUrl !== '') {
+      user.imageUrl = req.body.imageUrl;
+    }
+    if (typeof req.body.userBio !== '') {
+      user.userBio = req.body.userBio;
+    }
+    if (typeof req.body.location !== '') {
+      user.location = req.body.location;
+    }
+    if (typeof req.body.graduation !== '') {
+      user.graduation = req.body.graduation;
+    }
+    if (typeof req.body.stack !== '') {
+      user.stack = req.body.stack;
+    }
+    if (typeof req.body.githubLink !== '') {
+      user.githubLink = req.body.githubLink;
+    }
+    if (typeof req.body.linkedInLink !== '') {
+      user.linkedInLink = req.body.linkedInLink;
+    }
+
+    console.log(user);
+
+    return user.save().then(user => {
       return res.json(User.profileJSON(user));
     })
   });
