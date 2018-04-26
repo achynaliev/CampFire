@@ -27,6 +27,14 @@ router.get('/:username', function(req, res, next) {
   } else {
     return res.status(401).json({message: 'No user found'});
   }
+});
+
+router.put('/:username', function(req, res, next) {
+  User.findOne({ username: req.user.username}).then(user => {
+    req.user.save().then(user => {
+      return res.json(User.profileJSON(user));
+    })
+  });
 })
 
 module.exports = router;
