@@ -6,6 +6,7 @@ import { EditProfileComponent } from './edit-profile.component';
 import { ProfileResolver } from './profile-resolver.service';
 
 export const profileRoutes: Routes = [
+  { path: 'profile/editProfile', component: EditProfileComponent },
   {
     path: 'profile/:username',
     component: ProfileComponent,
@@ -13,7 +14,6 @@ export const profileRoutes: Routes = [
       profile: ProfileResolver
     }
   },
-  { path: 'editProfile', component: EditProfileComponent }
 ];
 
 @NgModule({
