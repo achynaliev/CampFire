@@ -24,7 +24,6 @@ export class SignupComponent implements OnInit {
             null,
             this.myForm.value.passwordDigest
         );
-        console.log(user)
         this.authService.signup(user)
             .subscribe(
               data => {

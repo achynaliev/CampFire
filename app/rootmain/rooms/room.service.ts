@@ -19,7 +19,6 @@ export class RoomService {
                 const rooms = response.json().obj;
                 let transformedMessages: Room[] = [];
                 for (let room of rooms) {
-                  console.log(room)
                     transformedMessages.push(new Room(
                         room.title,
                         room.category,

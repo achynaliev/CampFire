@@ -15,6 +15,8 @@ import { RoomComponent } from './rootmain/rooms/room.component';
 import { RoomService } from './rootmain/rooms/room.service';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AppComponent } from "./app.component";
+import { SearchComponent } from "./search/search.component";
+import { SearchService } from "./search/search.service";
 
 @NgModule({
     declarations: [
@@ -26,7 +28,8 @@ import { AppComponent } from "./app.component";
       RootMainComponent,
       RoomListComponent,
       RoomComponent,
-      NavbarComponent
+      NavbarComponent,
+      SearchComponent
     ],
     imports: [
       BrowserModule,
@@ -36,7 +39,7 @@ import { AppComponent } from "./app.component";
       ReactiveFormsModule,
       HttpModule
     ],
-    providers: [AuthService, RoomService],
+    providers: [AuthService, RoomService, SearchService],
     bootstrap: [AppComponent]
 })
 export class AppModule {
