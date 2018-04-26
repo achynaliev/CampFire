@@ -10,6 +10,7 @@ import { RoomService } from "./room.service";
 })
 export class RoomComponent {
     @Input() room: Room;
+    console.log(room)
 
     constructor(private roomService: RoomService) {}
 

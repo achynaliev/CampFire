@@ -1,13 +1,26 @@
-import { Component, Input } from "@angular/core";
+import { Component, Input, ContentChild , TemplateRef} from "@angular/core";
 import { SearchResult } from "./search.model";
 import { SearchService } from "./search.service";
-import { FormGroup, FormControl } from "@angular/forms";
+import { ngRoute } from "angular-route"
 
 @Component({
     selector: 'app-search',
-    template: `<input type="text" #box (keyup)="onChange(box.value)"/>`
+    template: `<div class="search-main">
+                <div class="search-input">
+                  <input placeholder="Search" type="text" #box (keyup)="onChange(box.value)"/>
+                </div>
+                <div class="search-index">
+                  <app-search-item
+                      [searchResult] = "searchResult"
+                      *ngFor="let searchResult of searchResults"></app-search-item>
+                 </div>
+              </div>
+
+`
 })
 export class SearchComponent {
+    @ContentChild(TemplateRef)
+    template: TemplateRef<SearchResult>;
     searchResults: SearchResult[];
 
     constructor(private searchService: SearchService) {}
@@ -17,10 +30,38 @@ export class SearchComponent {
         this.searchService.getSearchResults(value)
           .subscribe(
             (searchResults: SearchResult[]) =>{
-              this.searchResults = searchResults;
-              console.log(searchResults)
+              this.searchResults = searchResults
+            }
+          );
+      } else {
+        this.searchService.getSearchResults("##")
+          .subscribe(
+            (searchResults: SearchResult[]) =>{
+              this.searchResults = searchResults
             }
           );
       }
     }
+
+    // ngOnInit() {
+    //   this.searchService.getSearchResults("at")
+    //     .subscribe(
+    //       (searchResults: SearchResult[]) =>{
+    //         this.searchResults = searchResults
+    //         console.log(searchResults);
+    //       }
+    //     );
+    // }
 }
+// <input placeholder="Search" type="text" #box (keyup)="onChange(box.value)"/>
+
+// <div class="search-main">
+//   <div class="search-input">
+//   <input placeholder="Search" type="text" #box (keyup)="onChange(box.value)"/>
+//   </div>
+//   <div class="search-index">
+//     <app-search-item
+//       [searchResults] = "searchResults"
+//       *ngFor="let result of results"></app-search-item>
+//   </div>
+// </div>

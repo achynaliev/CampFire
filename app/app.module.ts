@@ -17,6 +17,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { AppComponent } from "./app.component";
 import { SearchComponent } from "./search/search.component";
 import { SearchService } from "./search/search.service";
+import { SearchItem } from './search/search-item.component';
 
 @NgModule({
     declarations: [
@@ -29,7 +30,8 @@ import { SearchService } from "./search/search.service";
       RoomListComponent,
       RoomComponent,
       NavbarComponent,
-      SearchComponent
+      SearchComponent,
+      SearchItem
     ],
     imports: [
       BrowserModule,
