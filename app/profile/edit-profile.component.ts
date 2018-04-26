@@ -18,6 +18,7 @@ export class EditProfileComponent implements OnInit {
 
   onSubmit() {
       const profile = new Profile(
+          this.myForm.value.imageUrl,
           this.myForm.value.location,
           this.myForm.value.graduation,
           this.myForm.value.stack,
@@ -37,6 +38,7 @@ export class EditProfileComponent implements OnInit {
 
   ngOnInit() {
       this.myForm = new FormGroup({
+          imageUrl: new FormControl(),
           location: new FormControl(null, Validators.required),
           graduation: new FormControl(null, Validators.required),
           stack: new FormControl(null, Validators.required),

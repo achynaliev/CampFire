@@ -23,6 +23,8 @@ export const profileRoutes: Routes = [
   exports: [
     RouterModule
   ],
-  providers: [ProfileResolver]
+  providers: [
+    ProfileResolver
+  ]
 })
 export class ProfileRoutingModule {}
