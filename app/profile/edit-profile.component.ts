@@ -20,16 +20,18 @@ export class EditProfileComponent implements OnInit {
       const profile = new Profile(
           "",
           "",
-          "updated",
-          "",
-          this.myForm.value.imageUrl,
-          this.myForm.value.userBio,
-          this.myForm.value.location,
-          this.myForm.value.graduation,
-          this.myForm.value.stack,
           this.myForm.value.githubLink,
-          this.myForm.value.linkedInLink
+          this.myForm.value.graduation,
+          this.myForm.value.imageUrl,
+          "",
+          this.myForm.value.linkedInLink,
+          this.myForm.value.location,
+          "",
+          this.myForm.value.stack,
+          this.myForm.value.userBio,
+          "updated",
       );
+      console.log(profile);
       this.profileService.updateProfile(profile)
           .subscribe(
             data => {
