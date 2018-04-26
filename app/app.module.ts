@@ -15,15 +15,11 @@ import { RoomComponent } from './rootmain/rooms/room.component';
 import { RoomService } from './rootmain/rooms/room.service';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AppComponent } from "./app.component";
-<<<<<<< HEAD
 import { ChatService } from "./chat/chat.service";
 import { ChatModule } from "./chat/chat.module";
-
-=======
 import { SearchComponent } from "./search/search.component";
 import { SearchService } from "./search/search.service";
 import { SearchItem } from './search/search-item.component';
->>>>>>> master
 
 @NgModule({
     declarations: [
@@ -48,11 +44,7 @@ import { SearchItem } from './search/search-item.component';
       HttpModule,
       ChatModule
     ],
-<<<<<<< HEAD
-    providers: [AuthService, RoomService, ChatService],
-=======
-    providers: [AuthService, RoomService, SearchService],
->>>>>>> master
+    providers: [AuthService, RoomService, ChatService, SearchService],
     bootstrap: [AppComponent]
 })
 export class AppModule {
