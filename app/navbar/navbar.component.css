@@ -66,6 +66,7 @@
     color: #ccc;
 }
 
+
 /* Search */
 
 .form-control {
@@ -90,9 +91,10 @@
     }
 
     .navbar-collapse {
-      margin-left: 20px;
+      /* margin-left: 20px; */
       border-top: none;
       box-shadow: none;
+      background-color: #454545;
     }
 
     .search-button {
