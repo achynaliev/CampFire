@@ -33,8 +33,8 @@ export class EditProfileComponent implements OnInit {
       this.profileService.updateProfile(profile)
           .subscribe(
             data => {
-
-                this.router.navigateByUrl('/');
+                console.log(data);
+                this.router.navigateByUrl(`/profile/${data.username}`);
             },
             error => console.error(error)
           );
@@ -45,15 +45,11 @@ export class EditProfileComponent implements OnInit {
       this.myForm = new FormGroup({
           imageUrl: new FormControl(),
           userBio: new FormControl(),
-          location: new FormControl(null, Validators.required),
-          graduation: new FormControl(null, Validators.required),
-          stack: new FormControl(null, Validators.required),
-          githubLink: new FormControl(null, [
-              Validators.required,
-              // update with pattern for link
-              // Validators.pattern("[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?")
-          ]),
-          linkedInLink: new FormControl(null, Validators.required)
+          location: new FormControl(),
+          graduation: new FormControl(),
+          stack: new FormControl(),
+          githubLink: new FormControl(),
+          linkedInLink: new FormControl()
       });
   }
 }
