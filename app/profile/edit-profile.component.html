@@ -1,0 +1,48 @@
+<div class="col-md-8 col-md-offset-2">
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="location">Location</label>
+            <input
+                    type="text"
+                    id="text"
+                    class="form-control"
+                    formControlName="text">
+        </div>
+        <div class="form-group">
+            <label for="graduation">Completion Date</label>
+            <input
+                    type="text"
+                    id="graduation"
+                    class="form-control"
+                    formControlName="graduation">
+        </div>
+        <div class="form-group">
+            <label for="stack">Tech Stack</label>
+            <input
+                    type="text"
+                    id="stack"
+                    class="form-control"
+                    formControlName="stack">
+        </div>
+        <div class="form-group">
+            <label for="github">Github</label>
+            <input
+                    type="text"
+                    id="githubLink"
+                    class="form-control"
+                    formControlName="githubLink">
+        </div>
+        <div class="form-group">
+            <label for="linkedInLink">LinkedIn</label>
+            <input
+                    type="text"
+                    id="linkedInLink"
+                    class="form-control"
+                    formControlName="linkedInLink">
+        </div>
+        <button
+                class="btn btn-primary"
+                type="submit"
+                [disabled]="!myForm.valid">Submit</button>
+    </form>
+</div>
