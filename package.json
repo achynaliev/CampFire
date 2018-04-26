@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www",
+    "start": "nodemon ./bin/www",
     "build": "del-cli public/js/app && webpack --config webpack.config.dev.js --progress --profile --watch",
     "build:prod": "del-cli public/js/app && ngc -p tsconfig.aot.json && ngc -p tsconfig.aot.json && webpack --config webpack.config.prod.js --progress --profile --bail && del-cli 'app/**/*.js' 'app/**/*.ngsummary.json' 'app/**/*.ngstyle.*'"
   },
@@ -31,6 +31,7 @@
     "mongoose": "^5.0.15",
     "mongoose-unique-validator": "^2.0.0",
     "morgan": "~1.6.1",
+    "nodemon": "^1.17.3",
     "reflect-metadata": "^0.1.3",
     "rxjs": "^5.5.0",
     "serve-favicon": "~2.3.0",

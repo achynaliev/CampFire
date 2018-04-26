@@ -15,6 +15,9 @@ import { RoomComponent } from './rootmain/rooms/room.component';
 import { RoomService } from './rootmain/rooms/room.service';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AppComponent } from "./app.component";
+import { ChatService } from "./chat/chat.service";
+import { ChatModule } from "./chat/chat.module";
+
 
 @NgModule({
     declarations: [
@@ -34,9 +37,10 @@ import { AppComponent } from "./app.component";
       ProfileModule,
       routing,
       ReactiveFormsModule,
-      HttpModule
+      HttpModule,
+      ChatModule
     ],
-    providers: [AuthService, RoomService],
+    providers: [AuthService, RoomService, ChatService],
     bootstrap: [AppComponent]
 })
 export class AppModule {

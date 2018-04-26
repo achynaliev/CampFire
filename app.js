@@ -6,6 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 
+var chat = require('./routes/chat');
 var appRoutes = require('./routes/app');
 var userRoutes = require('./routes/user');
 var roomRoutes = require('./routes/room');
@@ -38,6 +39,7 @@ app.use('/search', searchRoutes);
 app.use('/room', roomRoutes);
 app.use('/user', userRoutes);
 app.use('/profiles', profileRoutes);
+app.use('/chat', chat);
 app.use('/', appRoutes);
 
 
