@@ -7,9 +7,7 @@ body {
     background-image: url(https://images.pexels.com/photos/776113/pexels-photo-776113.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
     background-size: cover;
     background-position: 100% -5%;
-    /* background-size: 105% 123%;
-    background-position: -99% -47%; */
-    padding-bottom: 100px;
+    padding-bottom: 130px;
     margin-bottom: 20px;
 }
 
