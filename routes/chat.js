@@ -20,18 +20,20 @@ io.on('connection', function(socket) {
   });
 });
 
-router.get('/chat/:room', function(req, res, next) {
-  Chat.find({room: req.params.room}, function(err, chats) {
+router.get('/', function(req, res, next) {
+  // console.log(req.query.room);
+  Chat.find({room: req.query.room}, function(err, chats) {
     if(err) return next(err);
     res.json(chats);
   });
 });
 
-router.post('/chat', function(req, res, next) {
-  Chat.create(req.body, function(err, post) {
-    if(err) return next(err);
-    res.json(post);
-  });
-});
+// router.post('/', function(req, res, next) {
+//   console.log("7777777777", req);
+//   Chat.create(req.body, function(err, post) {
+//     if(err) return next(err);
+//     res.json(post);
+//   });
+// });
 
 module.exports = router;

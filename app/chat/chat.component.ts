@@ -24,7 +24,7 @@ export class ChatComponent implements OnInit, AfterViewChecked {
   ngOnInit() {
     var currentUser = localStorage.getItem("currentUser");
     var user = JSON.parse(currentUser);
-    console.log("-----------------" user);
+    // console.log("-----------------" user);
     if(user !== null) {
       this.getChatByRoom("Node.js");
       this.msgData = { room: "Node.js", username: user.username, message: ''};
@@ -32,8 +32,10 @@ export class ChatComponent implements OnInit, AfterViewChecked {
       this.scrollToBottom();
     }
     this.socket.on('new-message', function(data) {
+      console.log(data);
       if (data.message.room === "Node.js") {
         this.chats.push(data.message);
+
         this.msgData = { room : "Node.js", username: user.username, message: ""};
         this.scrollToBottom();
       }
@@ -54,6 +56,7 @@ export class ChatComponent implements OnInit, AfterViewChecked {
   getChatByRoom(room) {
     this.chatService.getChatByRoom(room).then((res) => {
       this.chat = res;
+      // console.log("----------", res);
     }, (err) => {
       console.log(err);
     });
@@ -70,7 +73,7 @@ export class ChatComponent implements OnInit, AfterViewChecked {
   }
 
   sendMessage() {
-    console.log(this.msgData);
+    console.log("-----------", this.msgData);
     this.chatService.saveChat(this.msgData).then((result) => {
       this.socket.emit('save-message', result);
     }, (err) => {
