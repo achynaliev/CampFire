@@ -26,7 +26,7 @@ router.post('/', function (req, res, next) {
           message: 'Successfully logged in',
           token: token,
           currentUser: {userId: user._id, 'firstName': user.firstName, lastName: user.lastName,
-                email: user.email, imageUrl: user.imageUrl, userBio: user.userBio}
+                username: user.username, email: user.email, imageUrl: user.imageUrl, userBio: user.userBio}
         });
     });
 });
@@ -56,7 +56,7 @@ router.post('/signin', function(req, res, next) {
             message: 'Successfully logged in',
             token: token,
             currentUser: {userId: user._id, firstName: user.firstName, lastName: user.lastName,
-                  email: user.email, imageUrl: user.imageUrl, userBio: user.userBio}
+                  username: user.username, email: user.email, imageUrl: user.imageUrl, userBio: user.userBio}
         });
     });
 });

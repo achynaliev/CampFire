@@ -24,9 +24,10 @@ export class ChatComponent implements OnInit, AfterViewChecked {
   ngOnInit() {
     var currentUser = localStorage.getItem("currentUser");
     var user = JSON.parse(currentUser);
+    console.log("-----------------" user);
     if(user !== null) {
       this.getChatByRoom("Node.js");
-      this.msgData = { room: "Node.js", username: user.username, messages: ''};
+      this.msgData = { room: "Node.js", username: user.username, message: ''};
       this.joined = true;
       this.scrollToBottom();
     }
@@ -69,6 +70,7 @@ export class ChatComponent implements OnInit, AfterViewChecked {
   }
 
   sendMessage() {
+    console.log(this.msgData);
     this.chatService.saveChat(this.msgData).then((result) => {
       this.socket.emit('save-message', result);
     }, (err) => {
@@ -80,7 +82,7 @@ export class ChatComponent implements OnInit, AfterViewChecked {
     var date = new Date();
     var currentUser = localStorage.getItem("currentUser");
     var user = JSON.parse(currentUser);
-    this.socket.emit('save-message', { room: 'Node.js', username: user.username, message: `${user.username} left the room`}, updated_at: date });
+    this.socket.emit('save-message', { room: 'Node.js', username: user.username, message: `${user.username} left the room`, updated_at: date });
     // localStorage.removeItem('user');
     this.joined = false;
   }
