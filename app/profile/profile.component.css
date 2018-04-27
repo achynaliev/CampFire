@@ -1,9 +1,20 @@
+.profile-page {
+  background-color: #fafafa;
+  min-height: 100vh;
+}
+.profile-container {
+  display: flex;
+}
+.profile-banner {
+  flex-grow: 1;
+  margin-top: 70px;
+}
 .profile-banner-image {
   background-image: url(https://res.cloudinary.com/dh5e4xxbr/image/upload/v1523481802/gpst3hygwxlb9fcuko4y.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 400px;
+  height: 200px;
 }
 .profile-pic-container {
   width: 200px;
@@ -20,4 +31,7 @@
 }
 .profile-banner-content-body {
   text-align: center;
+}
+.tech-stack {
+  width: 300px;
 }

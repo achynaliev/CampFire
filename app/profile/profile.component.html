@@ -1,29 +1,34 @@
-<div class="profile-container">
-  <div class="profile-banner">
-    <div class="profile-banner-image"></div>
-    <div class="profile-banner-content">
-      <div class="profile-pic-container">
-        <img
-          class="profile-pic"
-          src="https://res.cloudinary.com/dh5e4xxbr/image/upload/v1523489168/tatt8hvxlk0qlq7by6cy.jpg"
-          alt="profile-pic">
-      </div>
-      <div class="profile-banner-content-body">
-        <h1>{{profile.firstName}} {{profile.lastName}}</h1>
-        <ul>
-          <li>Email: {{profile.email}}</li>
-          <li>Image Url: {{profile.imageUrl}}</li>
-          <li>Bio: {{profile.userBio}}</li>
-          <li>Phone: {{profile.phone}}</li>
-          <li>Location: {{profile.location}}</li>
-          <li>Bootcamp: {{profile.bootcamp}}</li>
-          <li>Graduation: {{profile.graduation}}</li>
-          <li>Stack: {{profile.stack}}</li>
-          <li>Github: {{profile.githubLink}}</li>
-          <li>LinkedIn: {{profile.linkedInLink}}</li>
-        </ul>
+<div class="profile-page">
+  <div class="profile-container container">
+    <div class="profile-banner panel">
+      <div class="profile-banner-image"></div>
+      <div class="profile-banner-content">
+        <div class="profile-pic-container">
+          <img
+            class="profile-pic"
+            src="https://res.cloudinary.com/dh5e4xxbr/image/upload/v1523489168/tatt8hvxlk0qlq7by6cy.jpg"
+            alt="profile-pic">
+        </div>
+        <div class="profile-banner-content-body">
+          <h1>{{profile.firstName}} {{profile.lastName}}</h1>
+          <ul>
+            <li>Email: {{profile.email}}</li>
+            <li>Image Url: {{profile.imageUrl}}</li>
+            <li>Bio: {{profile.userBio}}</li>
+            <li>Phone: {{profile.phone}}</li>
+            <li>Location: {{profile.location}}</li>
+            <li>Bootcamp: {{profile.bootcamp}}</li>
+            <li>Graduation: {{profile.graduation}}</li>
+            <li>Stack: {{profile.stack}}</li>
+            <li>Github: {{profile.githubLink}}</li>
+            <li>LinkedIn: {{profile.linkedInLink}}</li>
+          </ul>
 
+        </div>
       </div>
+    </div>
+    <div class="tech-stack">
+      <p>{{profile.stack}}</p>
     </div>
   </div>
 
