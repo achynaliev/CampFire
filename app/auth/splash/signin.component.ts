@@ -27,6 +27,7 @@ export class SigninComponent {
                 error => console.error(error)
             );
         this.myForm.reset();
+         $("div").removeClass("modal-backdrop in")
     }
 
     ngOnInit() {

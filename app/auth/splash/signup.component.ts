@@ -33,7 +33,8 @@ export class SignupComponent implements OnInit {
               },
               error => console.error(error)
             );
-        this.myForm.reset();
+            this.myForm.reset();
+            $("div").removeClass("modal-backdrop in");
     }
 
     ngOnInit() {
