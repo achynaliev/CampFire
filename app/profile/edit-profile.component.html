@@ -1,0 +1,80 @@
+<div class="col-md-8 col-md-offset-2">
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="imageUrl">Profile Pic Url</label>
+            <input
+                    type="text"
+                    id="imageUrl"
+                    class="form-control"
+                    value="{{currentUser.imageUrl}}"
+                    formControlName="imageUrl">
+        </div>
+        <div class="form-group">
+            <label for="bootcamp">Bootcamp</label>
+            <input
+                    type="text"
+                    id="bootcamp"
+                    class="form-control"
+                    value="{{currentUser.bootcamp}}"
+                    formControlName="bootcamp">
+        </div>
+        <div class="form-group">
+            <label for="location">Location</label>
+            <input
+                    type="text"
+                    id="location"
+                    class="form-control"
+                    value="{{currentUser.location}}"
+                    formControlName="location">
+        </div>
+        <div class="form-group">
+            <label for="graduation">Completion Date</label>
+            <input
+                    type="text"
+                    id="graduation"
+                    class="form-control"
+                    value="{{currentUser.graduation}}"
+                    formControlName="graduation">
+        </div>
+        <div class="form-group">
+            <label for="stack">Tech Stack</label>
+            <input
+                    type="text"
+                    id="stack"
+                    class="form-control"
+                    value="{{currentUser.stack}}"
+                    formControlName="stack">
+        </div>
+        <div class="form-group">
+            <label for="github">Github</label>
+            <input
+                    type="text"
+                    id="githubLink"
+                    class="form-control"
+                    value="{{currentUser.githubLink}}"
+                    formControlName="githubLink">
+        </div>
+        <div class="form-group">
+            <label for="linkedInLink">LinkedIn</label>
+            <input
+                    type="text"
+                    id="linkedInLink"
+                    class="form-control"
+                    value="{{currentUser.linkedInLink}}"
+                    formControlName="linkedInLink">
+        </div>
+        <div class="form-group">
+            <label for="userBio">Summary</label>
+            <input
+                    type="text"
+                    id="userBio"
+                    class="form-control"
+                    value="{{currentUser.userBio}}"
+                    formControlName="userBio">
+        </div>
+        <button
+                class="btn btn-primary"
+                type="submit"
+                [disabled]="!myForm.valid">Submit</button>
+    </form>
+</div>
