@@ -7,7 +7,7 @@ body {
     background-image: url(https://images.pexels.com/photos/776113/pexels-photo-776113.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
     background-size: cover;
     background-position: 100% -5%;
-    padding-bottom: 130px;
+    padding-bottom: 200px;
     margin-bottom: 20px;
 }
 
@@ -22,6 +22,8 @@ body {
     font-weight: bold;
     font-size: 60px;
     margin-bottom: 36px;
+    letter-spacing: 1px;
+    text-transform: lowercase;
 }
 
 .header-nightsky .hero p {
@@ -96,11 +98,16 @@ body {
   border-radius: 50%;
   width: 230px;
   height: 230px;
+  border: 1px solid #ededed;
+  margin-bottom: 18px;
 }
 
 .description-content h2 {
-  font-size: 2rem;
+  font-size: 21px;
+  margin-bottom: 6px;
 }
+
+
 
 @media (min-width: 576px) .container {
   max-width: 540px;
@@ -130,8 +137,8 @@ body {
 }
 
 .row {
-  margin-bottom: 80px;
-  margin-top: 70px;
+  margin-bottom: 60px;
+  margin-top: 60px;
 }
 
 /* featurettes */
@@ -140,6 +147,9 @@ body {
   width: 300px;
   height: 300px;
   object-fit: cover;
+  border-radius: 3px;
+  box-shadow: 0px 1px 1px 1px #e2dede;
+
 }
 
 .featurette-heading {
@@ -147,7 +157,17 @@ body {
   font-weight: 400;
   line-height: 1;
   letter-spacing: -.05rem;
-  /* text-align: left; */
+  font-size: 30px;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.featurette-heading h2 {
+  font-size: 60px;
+}
+
+.col-md-7 {
+  margin-top: 60px;
 }
 
 @media (min-width: 40em) .featurette-heading {
