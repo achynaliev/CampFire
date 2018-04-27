@@ -7,6 +7,7 @@
 var app = require('../app');
 var debug = require('debug')('angular2-nodejs:server');
 var http = require('http');
+var socketio = require('socket.io');
 
 /**
  * Get port from environment and store in Express.
@@ -20,6 +21,20 @@ app.set('port', port);
  */
 
 var server = http.createServer(app);
+var io = socketio.listen(server);
+app.set('socketio', io);
+app.set('server', server);
+
+io.on('connection', function(socket) {
+  console.log('User Connected');
+  socket.on('disconnect', function() {
+    console.log('User Disconnected');
+  });
+  socket.on('save-message', function(data) {
+    console.log("333",data);
+    io.emit('new-message', { message: data });
+  });
+});
 
 /**
  * Listen on provided port, on all network interfaces.

@@ -15,4 +15,12 @@ export class ProfileService {
         .map((response: Response) => response.json())
         .catch((error: Response) => Observable.throw(error.json()));
   }
+
+  updateProfile(user: Profile): Observable<Profile> {
+    const body = JSON.stringify(user);
+    const headers = new Headers({'Content-Type': 'application/json'});
+    return this.http.put(`http://localhost:3000/profiles/${user.username}`, body, {headers: headers})
+      .map((response: Response) => response.json())
+      .catch((error: Response) => Observable.throw(error.json()));
+  }
 }

@@ -18,6 +18,8 @@ import { AppComponent } from "./app.component";
 import { SearchComponent } from "./search/search.component";
 import { SearchService } from "./search/search.service";
 import { SearchItem } from './search/search-item.component';
+import { ChatService } from "./chat/chat.service";
+import { ChatModule } from "./chat/chat.module";
 
 @NgModule({
     declarations: [
@@ -39,9 +41,10 @@ import { SearchItem } from './search/search-item.component';
       ProfileModule,
       routing,
       ReactiveFormsModule,
-      HttpModule
+      HttpModule,
+      ChatModule
     ],
-    providers: [AuthService, RoomService, SearchService],
+    providers: [AuthService, RoomService, SearchService, ChatService],
     bootstrap: [AppComponent]
 })
 export class AppModule {
