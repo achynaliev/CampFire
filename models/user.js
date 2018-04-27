@@ -12,7 +12,14 @@ var schema = new Schema({
   imageUrl: {type: String},
   passwordDigest: {type: String, required: true},
   userBio: {type: String},
-  rooms: [{type: Schema.Types.ObjectId, ref: 'Room'}]
+  rooms: [{type: Schema.Types.ObjectId, ref: 'Room'}],
+  profileBackgroundImage: {type: String},
+  location: {type: String},
+  bootcamp: {type: String},
+  graduation: {type: String},
+  stack: {type: String},
+  githubLink: {type: String},
+  linkedInLink: {type: String}
 });
 
 schema.plugin(mongooseUniqueValidator);
@@ -25,7 +32,13 @@ schema.statics.profileJSON = function(user){
     email: user.email,
     phone: user.phone,
     imageUrl: user.imageUrl,
-    userBio: user.userBio
+    userBio: user.userBio,
+    profileBackgroundImage: user.profileBackgroundImage,
+    location: user.location,
+    graduation: user.graduation,
+    stack: user.stack,
+    githubLink: user.githubLink,
+    linkedInLink: user.linkedInLink
   };
 };
 
