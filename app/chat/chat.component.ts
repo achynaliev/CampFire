@@ -17,7 +17,7 @@ export class ChatComponent implements OnInit, AfterViewChecked {
   joined: boolean = false;
   newUser = { username: "", room: ""};
   msgData = {room: "", username: "", message: ""};
-  socket = io('http://localhost:4000');
+  socket = io('http://localhost:3000');
 
   constructor(private chatService : ChatService) {}
 
@@ -25,18 +25,18 @@ export class ChatComponent implements OnInit, AfterViewChecked {
     var currentUser = localStorage.getItem("currentUser");
     var user = JSON.parse(currentUser);
     // console.log("-----------------" user);
-    if(user !== null) {
+    if(user) {
       this.getChatByRoom("Node.js");
       this.msgData = { room: "Node.js", username: user.username, message: ''};
       this.joined = true;
       this.scrollToBottom();
     }
     this.socket.on('new-message', function(data) {
-      console.log(data);
-      if (data.message.room === "Node.js") {
-        this.chats.push(data.message);
+      console.log(data)
+      if (true) {
+        this.chats.push("hii");
 
-        this.msgData = { room : "Node.js", username: user.username, message: ""};
+        this.msgData = { room : "Node.js", username: user.username, message: "hi"};
         this.scrollToBottom();
       }
     }.bind(this));
@@ -73,9 +73,10 @@ export class ChatComponent implements OnInit, AfterViewChecked {
   }
 
   sendMessage() {
-    console.log("-----------", this.msgData);
+    // console.log("-----------", this.msgData);
     this.chatService.saveChat(this.msgData).then((result) => {
-      this.socket.emit('save-message', result);
+      console.log(result.obj)
+      this.socket.emit('save-message', result.obj);
     }, (err) => {
       console.log(err);
     });
