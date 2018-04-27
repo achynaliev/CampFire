@@ -4,12 +4,12 @@
 
       <div class="col-lg-9 col-md-8">
         <div class="panel panel-default">
-          <div class="profile-banner-image"></div>
+          <div class="profile-banner-image" [style.background-image]="'url(' + profile.profileBackgroundImage + ')'"></div>
           <div class="profile-banner-content">
             <div class="profile-pic-container">
               <img
               class="profile-pic"
-              src="https://res.cloudinary.com/dh5e4xxbr/image/upload/v1523489168/tatt8hvxlk0qlq7by6cy.jpg"
+              src={{profile.imageUrl}}
               alt="profile-pic">
             </div>
           </div>
@@ -40,18 +40,25 @@
             </span>
           </div>
         </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Summary</h3>
+          </div>
+          <div class="panel-body">
+            {{profile.userBio}}
+          </div>
+        </div>
       </div>
 
     </div>
+
+    <div class="row">
+
+      <div class="project"></div>
+      <div class="project"></div>
+      <div class="project"></div>
+      <div class="project"></div>
+    </div>
   </div>
-
-
-  <div class="summary">
-    {{profile.userBio}}
-  </div>
-
-  <div class="project"></div>
-  <div class="project"></div>
-  <div class="project"></div>
-  <div class="project"></div>
 </div>

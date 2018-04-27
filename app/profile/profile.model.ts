@@ -10,6 +10,7 @@ export class Profile {
       public linkedInLink: string,
       public location: string,
       public phone?: string,
+      public profileBackgroundImage: string,
       public stack: string,
       public userBio?: string,
       public username: string,
