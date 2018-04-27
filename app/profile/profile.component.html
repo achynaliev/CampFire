@@ -1,6 +1,6 @@
 <div class="profile-page">
   <div class="profile-container container">
-    <div class="profile-banner panel">
+    <div class="profile-banner panel panel-default">
       <div class="profile-banner-image"></div>
       <div class="profile-banner-content">
         <div class="profile-pic-container">
@@ -10,25 +10,34 @@
             alt="profile-pic">
         </div>
         <div class="profile-banner-content-body">
-          <h1>{{profile.firstName}} {{profile.lastName}}</h1>
+          <h1 class="user-names">{{profile.firstName}} {{profile.lastName}}</h1>
           <ul>
-            <li>Email: {{profile.email}}</li>
-            <li>Image Url: {{profile.imageUrl}}</li>
-            <li>Bio: {{profile.userBio}}</li>
-            <li>Phone: {{profile.phone}}</li>
-            <li>Location: {{profile.location}}</li>
-            <li>Bootcamp: {{profile.bootcamp}}</li>
-            <li>Graduation: {{profile.graduation}}</li>
-            <li>Stack: {{profile.stack}}</li>
-            <li>Github: {{profile.githubLink}}</li>
-            <li>LinkedIn: {{profile.linkedInLink}}</li>
+            <!-- <li>Email: {{profile.email}}</li> -->
+            <!-- <li>Image Url: {{profile.imageUrl}}</li> -->
+            <!-- <li>Bio: {{profile.userBio}}</li> -->
+            <!-- <li>Phone: {{profile.phone}}</li> -->
+            <li>{{profile.location}}</li>
+            <li>{{profile.bootcamp}}</li>
+            <li>{{profile.graduation}}</li>
           </ul>
 
         </div>
       </div>
     </div>
-    <div class="tech-stack">
-      <p>{{profile.stack}}</p>
+    <div class="tech-stack panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Technical Stack</h3>
+      </div>
+      <div class="panel-body stack-list">
+        {{profile.stack}}
+      </div>
+      <div class="panel-footer">
+        <span class="footer-spacer"></span>
+        <span>
+          <a href="{{profile.githubLink}}"><i class="fa fa-github"></i></a>
+          <a href="{{profile.linkedInLink}}"><i class="fa fa-linkedin"></i></a>
+        </span>
+      </div>
     </div>
   </div>
 

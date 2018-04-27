@@ -24,6 +24,7 @@
   margin-right: auto;
 }
 .profile-pic {
+  border: solid white 5px;
   border-radius: 50%;
   height: 200px;
   width: 200px;
@@ -31,6 +32,9 @@
 }
 .profile-banner-content-body {
   text-align: center;
+}
+.user-names {
+  font-size: 24px;
 }
 .tech-stack {
   width: 300px;
