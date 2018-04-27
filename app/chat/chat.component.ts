@@ -13,11 +13,11 @@ import * as io from "socket.io-client";
 export class ChatComponent implements OnInit, AfterViewChecked {
   @ViewChild('scrollMe') private myScrollContainer: ElementRef;
 
-  chats: any;
+  const chat;
   joined: boolean = false;
   newUser = { username: "", room: ""};
   msgData = {room: "", username: "", message: ""};
-  socket = io('http://localhost:4000');
+  socket = io('http://localhost:3000');
 
   constructor(private chatService : ChatService) {}
 
@@ -25,16 +25,16 @@ export class ChatComponent implements OnInit, AfterViewChecked {
     var currentUser = localStorage.getItem("currentUser");
     var user = JSON.parse(currentUser);
     // console.log("-----------------" user);
-    if(user !== null) {
-      this.getChatByRoom("Node.js");
+    if(user) {
+      chat = this.getChatByRoom("Node.js");
       this.msgData = { room: "Node.js", username: user.username, message: ''};
       this.joined = true;
       this.scrollToBottom();
     }
+    this.joinRoom()
     this.socket.on('new-message', function(data) {
-      console.log(data);
       if (data.message.room === "Node.js") {
-        this.chats.push(data.message);
+        this.chat.push(data.message);
 
         this.msgData = { room : "Node.js", username: user.username, message: ""};
         this.scrollToBottom();
@@ -73,7 +73,7 @@ export class ChatComponent implements OnInit, AfterViewChecked {
   }
 
   sendMessage() {
-    console.log("-----------", this.msgData);
+    // console.log("-----------", this.msgData);
     this.chatService.saveChat(this.msgData).then((result) => {
       this.socket.emit('save-message', result);
     }, (err) => {
