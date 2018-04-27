@@ -21,7 +21,6 @@ export class EditProfileComponent implements OnInit {
     private router: Router) {}
 
   onSubmit() {
-      debugger
       const profile = new Profile(
           this.currentUser.email,
           this.currentUser.firstName,
@@ -40,7 +39,6 @@ export class EditProfileComponent implements OnInit {
       this.profileService.updateProfile(profile)
           .subscribe(
             data => {
-                console.log(data);
                 this.router.navigateByUrl(`/profile/${data.username}`);
             },
             error => console.error(error)
@@ -49,19 +47,19 @@ export class EditProfileComponent implements OnInit {
   }
 
   ngOnInit() {
-      this.myForm = new FormGroup({
-          imageUrl: new FormControl(),
-          userBio: new FormControl(),
-          location: new FormControl(),
-          graduation: new FormControl(),
-          stack: new FormControl(),
-          githubLink: new FormControl(),
-          linkedInLink: new FormControl()
-      });
-      this.route.data.subscribe(
-        (data: {profile: Profile}) => {
-          this.currentUser = data.profile;
-        }
-      );
+    this.route.data.subscribe(
+      (data: {profile: Profile}) => {
+        this.currentUser = data.profile;
+      }
+    );
+    this.myForm = new FormGroup({
+        imageUrl: new FormControl(this.currentUser.imageUrl),
+        userBio: new FormControl(this.currentUser.userBio),
+        location: new FormControl(this.currentUser.location),
+        graduation: new FormControl(this.currentUser.graduation),
+        stack: new FormControl(this.currentUser.stack),
+        githubLink: new FormControl(this.currentUser.githubLink),
+        linkedInLink: new FormControl(this.currentUser.linkedInLink)
+    });
   }
 }
