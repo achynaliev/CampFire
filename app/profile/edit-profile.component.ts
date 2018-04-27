@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { FormGroup, FormControl, Validators } from "@angular/forms";
 
 import { ProfileService } from './profile.service';
@@ -13,23 +13,28 @@ import { Profile } from './profile.model';
 
 export class EditProfileComponent implements OnInit {
   myForm: FormGroup;
+  currentUser: Profile;
 
-  constructor(private profileService: ProfileService, private router: Router) {}
+  constructor(
+    private route: ActivatedRoute,
+    private profileService: ProfileService,
+    private router: Router) {}
 
   onSubmit() {
+      debugger
       const profile = new Profile(
-          "",
-          "",
+          this.currentUser.email,
+          this.currentUser.firstName,
           this.myForm.value.githubLink,
           this.myForm.value.graduation,
           this.myForm.value.imageUrl,
-          "",
+          this.currentUser.lastName,
           this.myForm.value.linkedInLink,
           this.myForm.value.location,
-          "",
+          this.currentUser.phone,
           this.myForm.value.stack,
           this.myForm.value.userBio,
-          "updated",
+          this.currentUser.username,
       );
       console.log(profile);
       this.profileService.updateProfile(profile)
@@ -53,5 +58,10 @@ export class EditProfileComponent implements OnInit {
           githubLink: new FormControl(),
           linkedInLink: new FormControl()
       });
+      this.route.data.subscribe(
+        (data: {profile: Profile}) => {
+          this.currentUser = data.profile;
+        }
+      );
   }
 }

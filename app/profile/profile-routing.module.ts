@@ -6,7 +6,13 @@ import { EditProfileComponent } from './edit-profile.component';
 import { ProfileResolver } from './profile-resolver.service';
 
 export const profileRoutes: Routes = [
-  { path: 'profile/:username/editProfile', component: EditProfileComponent },
+  {
+    path: 'profile/:username/editProfile',
+    component: EditProfileComponent,
+    resolve: {
+      profile: ProfileResolver
+    }
+   },
   {
     path: 'profile/:username',
     component: ProfileComponent,
