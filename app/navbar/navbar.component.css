@@ -7,6 +7,13 @@
     padding-top: 1px;
 }
 
+.logo {
+  width: 83px;
+  height: 71px;
+  background-color: transparent;
+  margin-top: -28px;
+}
+
  .navbar {
     margin-bottom: 0px;
     padding-top: 20px;
@@ -79,6 +86,7 @@
   border: 1px solid white;
 }
 
+
 @media screen and (max-width: 767px) {
 
     .navbar-default .navbar-nav .open .dropdown-menu>li>a{
@@ -91,7 +99,6 @@
     }
 
     .navbar-collapse {
-      /* margin-left: 20px; */
       border-top: none;
       box-shadow: none;
       background-color: #454545;
