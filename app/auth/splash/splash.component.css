@@ -91,7 +91,26 @@ body {
     border-top: none;
 }
 
+div.modal-header > button > span {
+  position: absolute;
+  top: 12px;
+  right: 17px;
+  color: white;
+}
 
+modal-title {
+  font-family: 'Montserrat', sans-serif;
+}
+
+div.modal-header {
+  color: white;
+  background-color: #454545;
+  font-family:
+}
+
+.modal-content {
+  border-radius: 3px;
+}
 /* circular description */
 
 .rounded-picture {
