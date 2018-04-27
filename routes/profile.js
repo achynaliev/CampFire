@@ -36,6 +36,9 @@ router.put('/:username', function(req, res, next) {
     if (typeof req.body.imageUrl !== '') {
       user.imageUrl = req.body.imageUrl;
     }
+    if (typeof req.body.bootcamp !== '') {
+      user.bootcamp = req.body.bootcamp;
+    }
     if (typeof req.body.userBio !== '') {
       user.userBio = req.body.userBio;
     }

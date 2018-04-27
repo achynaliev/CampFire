@@ -26,6 +26,7 @@ schema.plugin(mongooseUniqueValidator);
 
 schema.statics.profileJSON = function(user){
   return {
+    bootcamp: user.bootcamp,
     firstName: user.firstName,
     lastName: user.lastName,
     username: user.username,

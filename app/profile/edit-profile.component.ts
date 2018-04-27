@@ -22,6 +22,7 @@ export class EditProfileComponent implements OnInit {
 
   onSubmit() {
       const profile = new Profile(
+          this.myForm.value.bootcamp,
           this.currentUser.email,
           this.currentUser.firstName,
           this.myForm.value.githubLink,
@@ -53,6 +54,7 @@ export class EditProfileComponent implements OnInit {
       }
     );
     this.myForm = new FormGroup({
+        bootcamp: new FormControl(this.currentUser.bootcamp),
         imageUrl: new FormControl(this.currentUser.imageUrl),
         userBio: new FormControl(this.currentUser.userBio),
         location: new FormControl(this.currentUser.location),

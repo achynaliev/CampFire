@@ -1,5 +1,6 @@
 export class Profile {
     constructor(
+      public bootcamp: string,
       public email: string,
       public firstName: string,
       public githubLink: string,
