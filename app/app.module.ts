@@ -20,6 +20,7 @@ import { SearchService } from "./search/search.service";
 import { SearchItem } from './search/search-item.component';
 import { ChatService } from "./chat/chat.service";
 import { ChatModule } from "./chat/chat.module";
+import { UserComponent } from "./userContainer/userContainer.component";
 
 @NgModule({
     declarations: [
@@ -33,7 +34,8 @@ import { ChatModule } from "./chat/chat.module";
       RoomComponent,
       NavbarComponent,
       SearchComponent,
-      SearchItem
+      SearchItem,
+      UserComponent
     ],
     imports: [
       BrowserModule,

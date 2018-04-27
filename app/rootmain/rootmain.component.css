@@ -23,13 +23,13 @@
 
 .user-stats {
   width: 100%;
-  height: 10vw;
+  height: 15%;
   border-bottom: solid gray 0.5px;
 }
 
 .rooms-list {
   width: 100%;
-  height: 90vw;
+  height: 85%;
   border-right: solid gray 0.5px;
 }
 
