@@ -6,6 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 
+var mLabKeys = require('./configkeys/keys');
 var chatRoutes = require('./routes/chat');
 var appRoutes = require('./routes/app');
 var userRoutes = require('./routes/user');
@@ -13,9 +14,15 @@ var roomRoutes = require('./routes/room');
 var profileRoutes = require('./routes/profile');
 var searchRoutes = require('./routes/search');
 
-var app = express();
-mongoose.connect('mongodb://localhost:27017/firecamp');
+// mongoose.connect('mongodb://localhost:27017/firecamp');
+mongoose.Promise = global.Promise;
+mongoose.connect(mLabKeys.mongoURI, function(err) {
+  if (err){
+    console.error("Error!" + err);
+  }
+});
 
+var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
