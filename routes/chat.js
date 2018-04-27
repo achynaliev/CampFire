@@ -16,10 +16,20 @@ router.post('/', function(req, res, next) {
   Chat.updateOne()
       .exec(function (err, rooms) {
         res.status(200).json({
-            message: 'Success',
-            obj: "hi"
+            room: "Node.js",
+            obj: "hi",
         });
       })
 });
+
+// router.post('/', function(req, res, next) {
+//   Chat.findOne()
+//     .exec(function (err, room) {
+//       res.status(200).json({
+//         room
+//       })
+// })
+// });
+
 
 module.exports = router;
