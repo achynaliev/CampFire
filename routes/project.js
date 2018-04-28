@@ -3,32 +3,34 @@ var router = express.Router();
 
 var bcrypt = require('bcryptjs');
 
-var User = require("../models/user");
+var Project = require("../models/project");
+var Category = require("../models/category");
+var ObjectId = require('mongoose').Types.ObjectId;
 
 router.post('/', function (req, res, next) {
     console.log(req.body)
-    // var user = new User({
-    //     firstName: req.body.firstName,
-    //     lastName: req.body.lastName,
-    //     username: req.body.username,
-    //     passwordDigest: bcrypt.hashSync(req.body.passwordDigest, 10),
-    //     email: req.body.email
-    // });
-    // user.save(function(err, result) {
-    //     if (err) {
-    //         return res.status(500).json({
-    //             title: 'An error occurred',
-    //             error: err
-    //         });
-    //     }
-    //     var token = jwt.sign({user: user}, 'secret', {expiresIn: 7200});
-    //     res.status(201).json({
-    //       message: 'Successfully logged in',
-    //       token: token,
-    //       currentUser: {userId: user._id, 'firstName': user.firstName, lastName: user.lastName,
-    //             username: user.username, email: user.email, imageUrl: user.imageUrl, userBio: user.userBio}
-    //     });
-    // });
+    var project = new Project({
+        title: req.body.title,
+        ownerId: req.body.ownerId,
+        fullDescription: req.body.fullDescription,
+        shortDescription: req.body.shortDescription,
+        imageUrl: req.body.imageUrl,
+        category: ObjectId(`${req.body.category}`),
+        done: req.body.done
+    });
+    console.log(project)
+    project.save(function(err, result) {
+      if (err) {
+        return res.status(500).json({
+          title: 'An error occurred',
+          error: err
+        });
+      }
+      res.status(201).json({
+        message: 'Successfully created',
+        project: {title: project.title}
+      });
+    });
 });
 
 module.exports = router;
