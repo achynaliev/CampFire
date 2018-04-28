@@ -20,6 +20,7 @@ import { SearchService } from "./search/search.service";
 import { SearchItem } from './search/search-item.component';
 import { ChatService } from "./chat/chat.service";
 import { ChatModule } from "./chat/chat.module";
+import { ProjectCreationComponent } from './projects/project_creation/project_creation.component';
 
 @NgModule({
     declarations: [
@@ -33,7 +34,9 @@ import { ChatModule } from "./chat/chat.module";
       RoomComponent,
       NavbarComponent,
       SearchComponent,
-      SearchItem
+      SearchItem,
+      ProjectCreationComponent
+
     ],
     imports: [
       BrowserModule,
@@ -42,7 +45,7 @@ import { ChatModule } from "./chat/chat.module";
       routing,
       ReactiveFormsModule,
       HttpModule,
-      ChatModule
+      ChatModule,
     ],
     providers: [AuthService, RoomService, SearchService, ChatService],
     bootstrap: [AppComponent]
