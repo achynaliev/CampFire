@@ -11,6 +11,7 @@
   width: 100vw;
   display: flex;
   flex-direction: row;
+  background-color: #D8DEE3;
 }
 
 .user-stats-rooms-list {
@@ -41,5 +42,6 @@
 }
 
 .chats-main {
-  width: 100%;
+  background-color: #D8DEE3;
+
 }
