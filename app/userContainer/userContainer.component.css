@@ -1,0 +1,18 @@
+.sidebar-pic {
+  border-radius: 50%;
+  width: 140px;
+  height: 140px;
+
+}
+
+.user-container {
+  padding-top: 2vw;
+  text-transform: capitalize;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.user-detail p:hover {
+  /* text-decoration: none; */
+}

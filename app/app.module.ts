@@ -20,7 +20,11 @@ import { SearchService } from "./search/search.service";
 import { SearchItem } from './search/search-item.component';
 import { ChatService } from "./chat/chat.service";
 import { ChatModule } from "./chat/chat.module";
+<<<<<<< HEAD
 import { ProjectCreationComponent } from './projects/project_creation/project_creation.component';
+=======
+import { UserComponent } from "./userContainer/userContainer.component";
+>>>>>>> master
 
 @NgModule({
     declarations: [
@@ -35,8 +39,12 @@ import { ProjectCreationComponent } from './projects/project_creation/project_cr
       NavbarComponent,
       SearchComponent,
       SearchItem,
+<<<<<<< HEAD
       ProjectCreationComponent
 
+=======
+      UserComponent
+>>>>>>> master
     ],
     imports: [
       BrowserModule,

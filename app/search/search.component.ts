@@ -7,16 +7,15 @@ import { ngRoute } from "angular-route"
     selector: 'app-search',
     template: `<div class="search-main">
                 <div class="search-input">
-                  <input placeholder="Search" type="text" #box (keyup)="onChange(box.value)"/>
+                  <input class="search-bar" placeholder="Search" type="text" #box (keyup)="onChange(box.value)"/>
                 </div>
                 <div class="search-index">
                   <app-search-item
                       [searchResult] = "searchResult"
                       *ngFor="let searchResult of searchResults"></app-search-item>
                  </div>
-              </div>
-
-`
+              </div>`,
+    styleUrls: ['./search.component.css']
 })
 export class SearchComponent {
     @ContentChild(TemplateRef)
