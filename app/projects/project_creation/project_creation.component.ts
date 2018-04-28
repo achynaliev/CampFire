@@ -20,10 +20,7 @@ export class ProjectCreationComponent implements OnInit {
           fullDescription: new FormControl(null, Validators.required),
           shortDescription: new FormControl(null, Validators.required)
       });
-<<<<<<< HEAD
-=======
       console.log(localStorage.getItem('currentUser'))
->>>>>>> master
   }
 
   onSubmit() {
