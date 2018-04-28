@@ -1,0 +1,40 @@
+<div class="main-project-creation">
+  <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+          <label for="title">Title</label>
+          <input
+                  type="text"
+                  id="title"
+                  class="form-control"
+                  formControlName="title">
+      </div>
+      <div class="form-group">
+          <label for="imageUrl">Image Url</label>
+          <input
+                  type="text"
+                  id="imageUrl"
+                  class="form-control"
+                  formControlName="imageUrl">
+      </div>
+      <div class="form-group">
+          <label for="shortDescription">Short Description</label>
+          <input
+                  type="text"
+                  id="shortDescription"
+                  class="form-control"
+                  formControlName="shortDescription">
+      </div>
+      <div class="form-group">
+          <label for="fullDescription">Full Description</label>
+          <input
+                  type="text"
+                  id="fullDescription"
+                  class="form-control"
+                  formControlName="fullDescription">
+      </div>
+      <button
+              class="btn btn-primary"
+              type="submit"
+              [disabled]="!myForm.valid">Submit</button>
+  </form>
+</div>
