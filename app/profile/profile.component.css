@@ -2,20 +2,23 @@
   background-color: #fafafa;
   min-height: 100vh;
 }
+
 .profile-container {
-  display: flex;
+  padding-top: 70px;
 }
+
 .profile-banner {
-  flex-grow: 1;
   margin-top: 70px;
 }
+
 .profile-banner-image {
-  background-image: url(https://res.cloudinary.com/dh5e4xxbr/image/upload/v1523481802/gpst3hygwxlb9fcuko4y.jpg);
+  /* background-image: url(https://res.cloudinary.com/dh5e4xxbr/image/upload/v1523473556/odgujdbfgx8xhrz2ppgg.jpg); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 200px;
 }
+
 .profile-pic-container {
   width: 200px;
   margin-top: -120px;
@@ -32,10 +35,15 @@
 }
 .profile-banner-content-body {
   text-align: center;
+  padding-bottom: 20px;
 }
 .user-names {
   font-size: 24px;
 }
 .tech-stack {
   width: 300px;
+}
+.stack-footer {
+  display: flex;
+  justify-content: space-between;
 }

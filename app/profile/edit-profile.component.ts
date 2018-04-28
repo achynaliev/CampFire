@@ -32,6 +32,7 @@ export class EditProfileComponent implements OnInit {
           this.myForm.value.linkedInLink,
           this.myForm.value.location,
           this.currentUser.phone,
+          this.myForm.value.profileBackgroundImage,
           this.myForm.value.stack,
           this.myForm.value.userBio,
           this.currentUser.username,
@@ -54,8 +55,10 @@ export class EditProfileComponent implements OnInit {
       }
     );
     this.myForm = new FormGroup({
+
         bootcamp: new FormControl(this.currentUser.bootcamp),
         imageUrl: new FormControl(this.currentUser.imageUrl),
+        profileBackgroundImage: new FormControl(this.currentUser.profileBackgroundImage),
         userBio: new FormControl(this.currentUser.userBio),
         location: new FormControl(this.currentUser.location),
         graduation: new FormControl(this.currentUser.graduation),

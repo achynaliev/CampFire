@@ -17,7 +17,7 @@ var projectRoutes = require('./routes/project');
 
 var app = express();
 mongoose.connect('mongodb://localhost:27017/firecamp');
-//
+
 // mongoose.Promise = global.Promise;
 // mongoose.connect(mLabKeys.mongoURI, function(err) {
 //  if (err){

@@ -1,52 +1,64 @@
 <div class="profile-page">
   <div class="profile-container container">
-    <div class="profile-banner panel panel-default">
-      <div class="profile-banner-image"></div>
-      <div class="profile-banner-content">
-        <div class="profile-pic-container">
-          <img
-            class="profile-pic"
-            src="https://res.cloudinary.com/dh5e4xxbr/image/upload/v1523489168/tatt8hvxlk0qlq7by6cy.jpg"
-            alt="profile-pic">
-        </div>
-        <div class="profile-banner-content-body">
-          <h1 class="user-names">{{profile.firstName}} {{profile.lastName}}</h1>
-          <ul>
-            <!-- <li>Email: {{profile.email}}</li> -->
-            <!-- <li>Image Url: {{profile.imageUrl}}</li> -->
-            <!-- <li>Bio: {{profile.userBio}}</li> -->
-            <!-- <li>Phone: {{profile.phone}}</li> -->
-            <li>{{profile.location}}</li>
-            <li>{{profile.bootcamp}}</li>
-            <li>{{profile.graduation}}</li>
-          </ul>
+    <div class="row">
 
+      <div class="col-lg-9 col-md-8">
+        <div class="panel panel-default">
+          <div class="profile-banner-image" [style.background-image]="'url(' + profile.profileBackgroundImage + ')'"></div>
+          <div class="profile-banner-content">
+            <div class="profile-pic-container">
+              <img
+              class="profile-pic"
+              src={{profile.imageUrl}}
+              alt="profile-pic">
+            </div>
+          </div>
+          <div class="profile-banner-content-body">
+            <h1 class="user-names">{{profile.firstName}} {{profile.lastName}}</h1>
+            <ul>
+              <li>{{profile.location}}</li>
+              <li>{{profile.bootcamp}}</li>
+              <li>{{profile.graduation}}</li>
+            </ul>
+          </div>
         </div>
       </div>
+
+      <div class="col-lg-3 col-md-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Technical Stack</h3>
+          </div>
+          <div class="panel-body">
+            {{profile.stack}}
+          </div>
+          <div class="panel-footer stack-footer">
+            <span></span>
+            <span>
+              <a href="{{profile.githubLink}}"><i class="fa fa-github"></i></a>
+              <a href="{{profile.linkedInLink}}"><i class="fa fa-linkedin"></i></a>
+            </span>
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Summary</h3>
+          </div>
+          <div class="panel-body">
+            {{profile.userBio}}
+          </div>
+        </div>
+      </div>
+
     </div>
-    <div class="tech-stack panel panel-default">
-      <div class="panel-heading">
-        <h3 class="panel-title">Technical Stack</h3>
-      </div>
-      <div class="panel-body stack-list">
-        {{profile.stack}}
-      </div>
-      <div class="panel-footer">
-        <span class="footer-spacer"></span>
-        <span>
-          <a href="{{profile.githubLink}}"><i class="fa fa-github"></i></a>
-          <a href="{{profile.linkedInLink}}"><i class="fa fa-linkedin"></i></a>
-        </span>
-      </div>
+
+    <div class="row">
+
+      <div class="project"></div>
+      <div class="project"></div>
+      <div class="project"></div>
+      <div class="project"></div>
     </div>
   </div>
-
-  <div class="summary">
-    {{profile.userBio}}
-  </div>
-
-  <div class="project"></div>
-  <div class="project"></div>
-  <div class="project"></div>
-  <div class="project"></div>
 </div>
