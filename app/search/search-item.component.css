@@ -1,0 +1,9 @@
+.search-result {
+  border-radius: 4px;
+}
+
+.search-item {
+  background-color: #AAAAAA;
+  padding: 10px;
+  text-transform: capitalize;
+}
