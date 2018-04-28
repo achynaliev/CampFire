@@ -86,9 +86,9 @@ body {
 /* modal */
 
 .modal-footer {
-    padding: 15px;
-    text-align: right;
-    border-top: none;
+  padding: 15px;
+  text-align: right;
+  border-top: none;
 }
 
 div.modal-header > button > span {
@@ -111,6 +111,12 @@ div.modal-header {
 .modal-content {
   border-radius: 3px;
 }
+
+
+.btn-primary {
+  background-color: green !important;
+}
+
 /* circular description */
 
 .rounded-picture {
@@ -131,20 +137,6 @@ div.modal-header {
 @media (min-width: 576px) .container {
   max-width: 540px;
 }
-
-/* @media (min-width: 1200px)
-.container {
-    max-width: 1140px;
-} */
-
-/* .container {
-  width: 100%;
-  padding-right: 120px;
-  padding-left: 120px;
-  margin-right: auto;
-  margin-left: auto;
-} */
-
 
 .col-lg-4 {
   margin-bottom: 1.5em;
