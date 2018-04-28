@@ -28,6 +28,11 @@ export class ProfileComponent implements OnInit {
     );
   }
 
+  getBackgroundImage() {
+    console.log(this.profile.profileBackgroundImage);
+    return "url(this.profile.profileBackgroundImage)";
+  }
+
   goBack(): void {
     this.location.back();
   }
