@@ -22,6 +22,7 @@ import { ChatService } from "./chat/chat.service";
 import { ChatModule } from "./chat/chat.module";
 import { UserComponent } from "./userContainer/userContainer.component";
 import { ProjectCreationComponent } from "./projects/project_creation/project_creation.component";
+import { ProjectService } from "./projects/projects.service";
 
 @NgModule({
     declarations: [
@@ -48,7 +49,7 @@ import { ProjectCreationComponent } from "./projects/project_creation/project_cr
       HttpModule,
       ChatModule,
     ],
-    providers: [AuthService, RoomService, SearchService, ChatService],
+    providers: [AuthService, RoomService, SearchService, ChatService, ProjectService],
     bootstrap: [AppComponent]
 })
 export class AppModule {
