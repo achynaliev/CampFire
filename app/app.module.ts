@@ -23,6 +23,9 @@ import { ChatModule } from "./chat/chat.module";
 import { UserComponent } from "./userContainer/userContainer.component";
 import { ProjectCreationComponent } from "./projects/project_creation/project_creation.component";
 import { ProjectService } from "./projects/projects.service";
+import { ProjectIndexComponent } from "./projects/project_index/project_index.component";
+import { ProjectIndexItem } from "./projects/project_index/project_index_item.component";
+import { ProjectIndexService } from "./projects/project_index/project_index.service"
 
 @NgModule({
     declarations: [
@@ -38,7 +41,9 @@ import { ProjectService } from "./projects/projects.service";
       SearchComponent,
       SearchItem,
       UserComponent,
-      ProjectCreationComponent
+      ProjectCreationComponent,
+      ProjectIndexItem,
+      ProjectIndexComponent
     ],
     imports: [
       BrowserModule,
@@ -49,7 +54,7 @@ import { ProjectService } from "./projects/projects.service";
       HttpModule,
       ChatModule,
     ],
-    providers: [AuthService, RoomService, SearchService, ChatService, ProjectService],
+    providers: [AuthService, RoomService, SearchService, ChatService, ProjectService, ProjectIndexService],
     bootstrap: [AppComponent]
 })
 export class AppModule {

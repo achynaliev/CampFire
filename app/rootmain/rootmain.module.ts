@@ -12,7 +12,8 @@ import { RootMainRouting } from './rootmain.routes';
     NavbarComponent
   ],
   declarations: [
-    RootMainComponent
+    RootMainComponent,
+
   ]
 })
 
