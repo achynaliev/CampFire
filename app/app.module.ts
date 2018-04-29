@@ -38,7 +38,7 @@ import { ProjectService } from "./projects/projects.service";
       SearchComponent,
       SearchItem,
       UserComponent,
-      ProjectCreationComponent
+      ProjectCreationComponent,
     ],
     imports: [
       BrowserModule,
