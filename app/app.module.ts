@@ -13,16 +13,18 @@ import { RootMainComponent } from "./rootmain/rootmain.component";
 import { RoomListComponent } from './rootmain/rooms/room-list.component';
 import { RoomComponent } from './rootmain/rooms/room.component';
 import { RoomService } from './rootmain/rooms/room.service';
-import { NavbarComponent } from './navbar/navbar.component';
+// import { NavbarComponent } from './navbar/navbar.component';
 import { AppComponent } from "./app.component";
-import { SearchComponent } from "./search/search.component";
+// import { SearchComponent } from "./search/search.component";
 import { SearchService } from "./search/search.service";
-import { SearchItem } from './search/search-item.component';
+// import { SearchItem } from './search/search-item.component';
 import { ChatService } from "./chat/chat.service";
 import { ChatModule } from "./chat/chat.module";
 import { UserComponent } from "./userContainer/userContainer.component";
 import { ProjectCreationComponent } from "./projects/project_creation/project_creation.component";
 import { ProjectService } from "./projects/projects.service";
+
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
     declarations: [
@@ -34,9 +36,9 @@ import { ProjectService } from "./projects/projects.service";
       RootMainComponent,
       RoomListComponent,
       RoomComponent,
-      NavbarComponent,
-      SearchComponent,
-      SearchItem,
+      // NavbarComponent,
+      // SearchComponent,
+      // SearchItem,
       UserComponent,
       ProjectCreationComponent
     ],
@@ -44,6 +46,7 @@ import { ProjectService } from "./projects/projects.service";
       BrowserModule,
       FormsModule,
       ProfileModule,
+      SharedModule,
       routing,
       ReactiveFormsModule,
       HttpModule,
