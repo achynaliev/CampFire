@@ -64,6 +64,16 @@ router.get('/', function(req, res, next) {
     });
 });
 
+router.get('/:title', function(req, res, next) {
+  Project.find({title: req.params.title})
+  .exec(function(err, project) {
+    res.status(200).json({
+      message: 'Success',
+      project: project
+    });
+  });
+});
+
 
 
 module.exports = router;
