@@ -12,7 +12,7 @@ router.get('/', function (req, res, next) {
         return res.status(200).json({
           message: "Success",
           obj: user
-        })
+        });
       });
 });
 

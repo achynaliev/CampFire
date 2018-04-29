@@ -8,7 +8,7 @@ var Category = require("../models/category");
 var ObjectId = require('mongoose').Types.ObjectId;
 
 router.post('/', function (req, res, next) {
-    console.log(req.body)
+    console.log(req.body);
     var project = new Project({
         title: req.body.title,
         ownerId: req.body.ownerId,
@@ -19,7 +19,7 @@ router.post('/', function (req, res, next) {
         category: ObjectId(`${req.body.category}`),
         done: req.body.done
     });
-    console.log(project)
+    console.log(project);
     project.save(function(err, result) {
       if (err) {
         return res.status(500).json({
@@ -33,5 +33,17 @@ router.post('/', function (req, res, next) {
       });
     });
 });
+
+router.get('/', function(req, res, next) {
+  Project.find({})
+    .exec(function(err, projects) {
+      res.status(200).json({
+        message: 'Success',
+        obj: projects
+      });
+    });
+});
+
+
 
 module.exports = router;

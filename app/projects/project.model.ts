@@ -7,5 +7,6 @@ export class Project {
                 public fullDescription: string,
                 public shortDescription: string,
                 public category: string,
-                public done: boolean) {}
+                public done?: boolean) {}
+                // public id?: string
 }
