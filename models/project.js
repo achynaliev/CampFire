@@ -11,11 +11,7 @@ var projectSchema = new Schema({
   fullDescription: {type: String, required: true},
   shortDescription: {type: String, required: true},
   category: {type: Schema.Types.ObjectId, ref: 'Category'},
-<<<<<<< HEAD
-  done: {type: Boolean, required: true},
-=======
   done: {type: Boolean, required: true}
->>>>>>> master
 });
 
 module.exports = mongoose.model('Project', projectSchema);
