@@ -7,6 +7,17 @@
   background-color: inherit;
 }
 
+.edit-modal-button {
+  cursor: pointer;
+}
+
+a {
+  display: inline-block;
+   position: relative;
+   z-index: 1;
+   padding: 2em;
+   margin: -2em;
+}
 .profile-container {
   /* padding-top: 70px; */
 }
@@ -50,4 +61,33 @@
 .stack-footer {
   display: flex;
   justify-content: space-between;
+}
+
+/* modal */
+
+.modal-footer {
+  padding: 15px;
+  text-align: right;
+  border-top: none;
+}
+
+div.modal-header > button > span {
+  position: absolute;
+  top: 12px;
+  right: 17px;
+  color: white;
+}
+
+modal-title {
+  font-family: 'Montserrat', sans-serif;
+}
+
+div.modal-header {
+  color: white;
+  background-color: #454545;
+  font-family:
+}
+
+.modal-content {
+  border-radius: 3px;
 }
