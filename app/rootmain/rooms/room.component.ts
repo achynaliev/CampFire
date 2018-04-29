@@ -14,4 +14,8 @@ export class RoomComponent {
 
     constructor(private roomService: RoomService) {}
 
+    ChangeRoom() {
+
+    }
+
 }

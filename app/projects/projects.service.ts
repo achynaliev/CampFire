@@ -8,6 +8,7 @@ export class ProjectService {
 
   createProject(project) {
       const body = JSON.stringify(project);
+      console.log(body)
       const headers = new Headers({'Content-Type': 'application/json'});
       return this.http.post('http://localhost:3000/project', body, {headers: headers})
           .map((response: Response) => response.json())

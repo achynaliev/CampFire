@@ -5,30 +5,30 @@ var Chat =  require('../models/chat');
 
 
 router.get('/', function(req, res, next) {
-  // console.log(req.query.room);
   Chat.find({room: req.query.room}, function(err, chats) {
     if(err) return next(err);
     res.json(chats);
   });
 });
 
+
+// Need to change from harcoded and can update chat room with this post
+
 router.post('/', function(req, res, next) {
   Chat.updateOne()
-      .exec(function (err, rooms) {
+      .exec(function (err, post) {
         res.status(200).json({
-            room: "Node.js",
-            obj: "hi",
+          obj: req.body
         });
-      })
+      });
 });
 
 // router.post('/', function(req, res, next) {
-//   Chat.findOne()
-//     .exec(function (err, room) {
-//       res.status(200).json({
-//         room
-//       })
-// })
+//   Chat.create(req.body)
+//   .exec(function (err, post) {
+//     if (err) return next(err);
+//     res.json(post);
+//   });
 // });
 
 

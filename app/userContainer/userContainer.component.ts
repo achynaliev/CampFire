@@ -17,7 +17,6 @@ export class UserComponent implements OnInit {
   ngOnInit() {
     var currentUser = localStorage.getItem("currentUser");
     var user = JSON.parse(currentUser);
-    console.log(user);
     if(user) {
       this.imageUrl = "http://profilepics.xyz/wp-content/uploads/2017/07/Cute-Profile-pics-1.gif";
       this.firstName = user.firstName;

@@ -12,7 +12,6 @@ export class ChatService {
       this.http.get('http://localhost:3000/chat', {headers: headers, params:{room}})
       .map(res => res.json())
       .subscribe(res => {
-        console.log(res)
         resolve(res);
       }, (err) => {
         reject(err);
@@ -27,7 +26,6 @@ export class ChatService {
       this.http.post('http://localhost:3000/chat', {headers: headers, params: {room}})
       .map(res => res.json())
       .subscribe(res => {
-        console.log(res.obj)
         resolve(res);
       }, (err) => {
         reject(err);

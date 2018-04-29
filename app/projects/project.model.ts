@@ -6,6 +6,7 @@ export class Project {
                 public imageUrl: string,
                 public fullDescription: string,
                 public shortDescription: string,
-                public category: string,
-                public done: boolean) {}
+                public categoryTitle: string,
+                public done?: boolean,
+                public projectId?: string) {}
 }

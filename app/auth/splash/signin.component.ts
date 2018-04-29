@@ -20,7 +20,6 @@ export class SigninComponent {
             .subscribe(
                 data => {
                     localStorage.setItem('token', data.token);
-                    console.log(">>>>>>.----DATA----<<<<<<<," data);
                     localStorage.setItem('currentUser', JSON.stringify(data.currentUser));
                     this.router.navigateByUrl('/');
                 },
