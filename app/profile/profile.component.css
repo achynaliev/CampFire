@@ -3,8 +3,12 @@
   min-height: 100vh;
 }
 
+.breadcrumb {
+  background-color: inherit;
+}
+
 .profile-container {
-  padding-top: 70px;
+  /* padding-top: 70px; */
 }
 
 .profile-banner {
