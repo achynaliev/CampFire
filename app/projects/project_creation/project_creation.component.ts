@@ -29,6 +29,7 @@ export class ProjectCreationComponent implements OnInit {
       const project = new Project(
           this.myForm.value.title,
           user.userId,
+          user.username,
           new Date(),
           this.myForm.value.imageUrl,
           this.myForm.value.fullDescription,
