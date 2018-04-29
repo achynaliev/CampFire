@@ -3,7 +3,27 @@
 }
 
 .search-item {
-  background-color: #AAAAAA;
+  background-color: #454545;
   padding: 10px;
   text-transform: capitalize;
+}
+
+.search-result div {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.search-item:hover {
+  cursor: pointer;
+  background-color: #AAAAAA;
+}
+
+@media screen and (max-width: 767px) {
+  .search-result {
+    display: none;
+  }
 }
