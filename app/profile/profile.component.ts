@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 
 import { ProfileService } from './profile.service';
+import { AuthService } from '../auth/splash/auth.service';
 import { Profile } from './profile.model';
 
 @Component({
@@ -13,9 +14,11 @@ import { Profile } from './profile.model';
 
 export class ProfileComponent implements OnInit {
   profile: Profile;
+  isOwnProfile: boolean;
 
   constructor(
     private route: ActivatedRoute,
+    private authService: AuthService,
     private profileService: ProfileService,
     private location: Location
   ) {}
@@ -26,14 +29,23 @@ export class ProfileComponent implements OnInit {
         this.profile = data.profile;
       }
     );
+    this.canEdit();
   }
 
   getBackgroundImage() {
-    console.log(this.profile.profileBackgroundImage);
     return "url(this.profile.profileBackgroundImage)";
   }
 
   goBack(): void {
     this.location.back();
+  }
+
+  canEdit() {
+    let user = JSON.parse(localStorage.getItem('currentUser'));
+    if (this.profile.username === user.username) {
+      this.isOwnProfile = true;
+    } else {
+      this.isOwnProfile = false;
+    }
   }
 }
