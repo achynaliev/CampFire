@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
 import { FormGroup, FormControl, Validators } from "@angular/forms";
 import { Project } from "../project.model";
+import { ProjectService } from "../projects.service";
 
 @Component({
   selector: 'project-creation',
@@ -11,7 +12,7 @@ import { Project } from "../project.model";
 
 export class ProjectCreationComponent implements OnInit {
   myForm: FormGroup;
-  constructor(private router: Router) {}
+  constructor(private projectService: ProjectService, private router: Router) {}
 
   ngOnInit() {
       this.myForm = new FormGroup({
@@ -20,25 +21,25 @@ export class ProjectCreationComponent implements OnInit {
           fullDescription: new FormControl(null, Validators.required),
           shortDescription: new FormControl(null, Validators.required)
       });
-      console.log(localStorage.getItem('currentUser'))
   }
 
   onSubmit() {
+      var cuser = localStorage.getItem('currentUser');
+      var user = JSON.parse(cuser);
       const project = new Project(
           this.myForm.value.title,
-          localStorage.getItem('currentUser'),
-          this.myForm.value.username,
-          this.myForm.value.email,
-          null,
-          null,
-          this.myForm.value.passwordDigest
+          user.userId,
+          new Date(),
+          this.myForm.value.imageUrl,
+          this.myForm.value.fullDescription,
+          this.myForm.value.shortDescription,
+          "5ade2b42a75b43e9e7bd011d",
+          false
       );
-      this.authService.signup(user)
+      this.projectService.createProject(project)
           .subscribe(
             data => {
-                localStorage.setItem('token', data.token);
-                localStorage.setItem('userId', data.userId);
-                this.router.navigateByUrl('/');
+              console.log(data);
             },
             error => console.error(error)
           );

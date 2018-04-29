@@ -7,6 +7,7 @@ import { SearchService } from "./search.service";
     selector: 'app-search-item',
     templateUrl: './search-item.component.html',
     // styleUrls: ['./roomslistitem.component.css']
+    styleUrls: ['./search-item.component.css']
 })
 export class SearchItem {
     @Input() searchResult: SearchResult;
