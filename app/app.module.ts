@@ -23,6 +23,7 @@ import { ChatModule } from "./chat/chat.module";
 import { UserComponent } from "./userContainer/userContainer.component";
 import { ProjectCreationComponent } from "./projects/project_creation/project_creation.component";
 import { ProjectService } from "./projects/projects.service";
+import { CurrentRoomComponent } from "./rootmain/currentroom/currentRoom.component";
 
 @NgModule({
     declarations: [
@@ -38,7 +39,8 @@ import { ProjectService } from "./projects/projects.service";
       SearchComponent,
       SearchItem,
       UserComponent,
-      ProjectCreationComponent
+      ProjectCreationComponent,
+      CurrentRoomComponent
     ],
     imports: [
       BrowserModule,
