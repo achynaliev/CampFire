@@ -9,7 +9,7 @@ var schema = new Schema({
   imageUrl: {type: String, required: true},
   fullDescription: {type: String}, required: true,
   shortDescription: {type: String, required: true},
-  category: {type: Schema.Types.ObjectId, ref: 'Category'}
+  category: {type: Schema.Types.ObjectId, ref: 'Category'},
   done: {type: Boolean, required: true},
 });
 
