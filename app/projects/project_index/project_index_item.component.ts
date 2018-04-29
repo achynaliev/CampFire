@@ -11,7 +11,6 @@ import { ProjectIndexService } from "./project_index.service";
 
 export class ProjectIndexItem {
   @Input() project: Project;
-  console.log(project);
 
   constructor(private projectIndexService: ProjectIndexService) {}
 }

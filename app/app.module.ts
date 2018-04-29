@@ -16,6 +16,7 @@ import { ChatModule } from "./chat/chat.module";
 import { UserComponent } from "./userContainer/userContainer.component";
 import { ProjectCreationComponent } from "./projects/project_creation/project_creation.component";
 import { ProjectService } from "./projects/projects.service";
+import { CurrentRoomComponent } from "./rootmain/currentroom/currentRoom.component";
 import { ProjectIndexComponent } from "./projects/project_index/project_index.component";
 import { ProjectIndexItem } from "./projects/project_index/project_index_item.component";
 import { ProjectIndexService } from "./projects/project_index/project_index.service"
@@ -30,6 +31,7 @@ import { SharedModule } from './shared/shared.module';
       RoomComponent,
       UserComponent,
       ProjectCreationComponent,
+      CurrentRoomComponent,
       ProjectIndexItem,
       ProjectIndexComponent
     ],

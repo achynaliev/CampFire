@@ -10,9 +10,9 @@ import { Router } from "@angular/router";
 export class CurrentRoomComponent implements OnInit {
   constructor(private router: Router) {}
 
-  ngOnInit() {
-    if (localStorage.getItem('currentRoom') == null) {
-      
-    }
-  }
+  // ngOnInit() {
+  //   if (localStorage.getItem('currentRoom') == null) {
+  //
+  //   }
+  // }
 }

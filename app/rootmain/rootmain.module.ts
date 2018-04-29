@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavbarComponent } from '../navbar/navbar.component';
 import { RootMainComponent } from './rootmain.component';
+import { CurrentRoomComponent } from './currentroom/currentRoom.component';
 
 import { RootMainRouting } from './rootmain.routes';
 
@@ -9,11 +10,10 @@ import { RootMainRouting } from './rootmain.routes';
   imports: [
     CommonModule,
     RootMainRouting,
-    NavbarComponent
+    NavbarComponent,
   ],
   declarations: [
-    RootMainComponent,
-
+    RootMainComponent,CurrentRoomComponent
   ]
 })
 

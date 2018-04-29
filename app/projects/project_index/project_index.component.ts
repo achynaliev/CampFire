@@ -17,7 +17,6 @@ export class ProjectIndexComponent implements OnInit {
   constructor(private projectIndexService: ProjectIndexService) {}
 
   ngOnInit() {
-    console.log("hi")
     this.projectIndexService.getProjects()
       .subscribe(
         (projects: Project[]) => {
