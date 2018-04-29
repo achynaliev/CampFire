@@ -12,11 +12,11 @@ router.post('/', function (req, res, next) {
     var project = new Project({
         title: req.body.title,
         ownerId: req.body.ownerId,
-        ownerUsername: req.body.username,
+        username: req.body.username,
         fullDescription: req.body.fullDescription,
         shortDescription: req.body.shortDescription,
         imageUrl: req.body.imageUrl,
-        category: ObjectId(`${req.body.category}`),
+        categoryTitle: req.body.categoryTitle,
         done: req.body.done
     });
     console.log(project);
