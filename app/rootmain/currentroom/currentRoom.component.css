@@ -1,0 +1,15 @@
+.rowl {
+  display: flex;
+  width: 85vw;
+}
+
+.main-navigation-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 85vw;
+}
+
+li {
+
+}
