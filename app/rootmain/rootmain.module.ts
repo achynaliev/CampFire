@@ -13,12 +13,7 @@ import { RootMainRouting } from './rootmain.routes';
     NavbarComponent,
   ],
   declarations: [
-<<<<<<< HEAD
     RootMainComponent,CurrentRoomComponent
-=======
-    RootMainComponent,
-
->>>>>>> 50fd5402e43b89b91fbabfd1f8cdaceb634ccaae
   ]
 })
 
