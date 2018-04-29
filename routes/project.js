@@ -34,6 +34,26 @@ router.post('/', function (req, res, next) {
     });
 });
 
+
+// router.get('/:id', function(req, res, next) {
+//   console.log(req.query.id);
+//   Project.find({id: req.query.id}, function(err, project) {
+//     if(err) return next(err);
+//     res.json(project);
+//   });
+// });
+
+// if (req) {
+//   Project.findOne({ id: req.body}).then(project => {
+//     if (!project) {
+//       return res.status(401).json({message: 'That project no longer exits!'});
+//     }
+//     return res.json(Project.json(project));
+//   });
+// } else {
+//   return res.status(401).json({message: 'No project found'});
+// }
+
 router.get('/', function(req, res, next) {
   Project.find({})
     .exec(function(err, projects) {

@@ -20,7 +20,6 @@ export class ProjectIndexComponent implements OnInit {
     this.projectIndexService.getProjects()
       .subscribe(
         (projects: Project[]) => {
-          console.log(projects);
           this.projects = projects;
         }
       )

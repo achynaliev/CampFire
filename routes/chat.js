@@ -5,7 +5,6 @@ var Chat =  require('../models/chat');
 
 
 router.get('/', function(req, res, next) {
-  // console.log(req.query.room);
   Chat.find({room: req.query.room}, function(err, chats) {
     if(err) return next(err);
     res.json(chats);

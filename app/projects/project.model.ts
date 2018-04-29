@@ -7,6 +7,6 @@ export class Project {
                 public fullDescription: string,
                 public shortDescription: string,
                 public categoryTitle: string,
-                public done?: boolean) {}
-                // public id?: string
+                public done?: boolean,
+                public projectId?: string) {}
 }

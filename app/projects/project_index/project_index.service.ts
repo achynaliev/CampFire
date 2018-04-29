@@ -17,20 +17,20 @@ export class ProjectIndexService {
     const headers = new Headers({'Content-Type': 'application/json'});
     return this.http.get('http://localhost:3000/project', {headers: headers})
       .map((response: Response) => {
-        console.log(response);
         const projects = response.json().obj;
         let transformedProjects: Project[] = [];
         for (let project of projects) {
           transformedProjects.push(new Project(
             project.title,
-            // null,
-            // null,
+            project.ownerId,
+            null,
+            null,
             project.imageUrl,
             project.fullDescription,
             project.shortDescription,
             project.category,
             project.done,
-            // null
+            project._id
           ));
         }
         this.projects = transformedProjects;
