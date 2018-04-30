@@ -22,7 +22,6 @@ export class RoomComponent{
       this.projectIndexService.getProjects(this.room.title)
         .subscribe(
           (projects: Project[]) => {
-            console.log(projects);
             this.projects = projects;
           }
         )

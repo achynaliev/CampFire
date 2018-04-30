@@ -25,7 +25,7 @@ export class RoomService {
                         room.logoUrl,
                     ));
                 }
-                this.messages = transformedMessages;
+                this.rooms = transformedMessages;
                 return transformedMessages;
             })
             .catch((error: Response) => Observable.throw(error.json()));

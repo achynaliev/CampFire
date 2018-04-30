@@ -58,8 +58,6 @@ router.put('/:username', function(req, res, next) {
       user.linkedInLink = req.body.linkedInLink;
     }
 
-    console.log(user);
-
     return user.save().then(user => {
       return res.json(User.profileJSON(user));
     })
