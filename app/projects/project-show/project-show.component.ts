@@ -22,7 +22,7 @@ export class ProjectShowComponent implements OnInit {
 
   ngOnInit() {
     this.route.data.subscribe(
-      data: {project: Project}) => {
+      (data: {project: Project}) => {
         this.project - data.project;
       }
     );

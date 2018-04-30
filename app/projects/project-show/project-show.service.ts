@@ -6,11 +6,12 @@ import { Project } from '../project.model';
 
 @Injectable()
 export class ProjectShowService {
+
   constructor(private http: Http) {}
 
-  getProject(id: string): Observable<Project> {
+  getProject(id): Observable<Project> {
     const headers = new Headers({'Content-type': 'application/json'});
-    return this.http.get(`http://localhost:3000/project/${id}`, {headers: headers})
+    return this.http.get(`http://localhost:3000/project`, {headers: headers, params: {id: id}})
       .map((response: Response) => response.json())
       .catch((error: Response) => Observable.throw(error.json()));
   }

@@ -22,7 +22,7 @@ import { AuthService } from '../../auth/splash/auth.service';
     ProjectShowComponent
     // EditProjectComponent
   ],
-  providers: [ProjectShowService, AuthService]
+  providers: [ProjectShowService, AuthService, ProjectShowService]
 })
 
 export class ProjectShowModule {}
