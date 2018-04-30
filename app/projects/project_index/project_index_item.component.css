@@ -1,0 +1,50 @@
+.project-index-item-container {
+  border: 1px solid black;
+  border-radius: 3px;
+  display: flex;
+  height: 70px;
+  /* width: 100px */
+  color: black;
+  background-color: white;
+  margin-bottom: 9px;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.project-index-item div:hover {
+  background-color: #EBF1F5;
+}
+
+.project-preview-title {
+  font-size: 20px;
+}
+
+.project-preview-image {
+  padding: 2px 0 2px 5px;
+  margin-top: 8px;
+  height: 50px;
+  width: 50px;
+  min-width: 50px;
+  min-height: 50px;
+}
+
+.project-preview-stack-username-date {
+  padding-right: 15px;
+}
+
+.project-preview-details {
+  padding-top: 2px;
+  padding-left: 10px;
+  width: 100%;
+  color: black;
+  overflow: scroll;
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+.project-preview-short {
+  padding: 5px 0 5px 0;
+  width: 600px;
+}

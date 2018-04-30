@@ -24,8 +24,8 @@ export class ProjectIndexService {
           transformedProjects.push(new Project(
             project.title,
             project.ownerId,
-            null,
-            null,
+            project.username,
+            project.createdDate,
             project.imageUrl,
             project.fullDescription,
             project.shortDescription,
@@ -40,7 +40,3 @@ export class ProjectIndexService {
       .catch((error: Response) => Observable.throw(error.json()));
   }
 }
-
-
-// Get owner name also?? --> project.model
-// .id or ._id or .ObjectId     ????

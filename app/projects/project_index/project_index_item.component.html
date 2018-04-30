@@ -1,5 +1,19 @@
-<div class="project-index-item-container">
-  <a class="project-index-item" href="/chat/node.js">
-    <h1>{{project.title}}</h1>
-  </a>
-</div>
+<a class="project-index-item" href="/project/{{project.projectId}}">
+  <div class="project-index-item-container">
+  <img class="project-preview-image img-rounded" src="{{project.imageUrl}}" alt="project-image">
+    <div class="project-preview-details">
+      <div class="project-preview-title-short">
+        <h1 class="project-preview-title">{{project.title}}</h1>
+        <p class="project-preview-short">{{project.shortDescription}}</p>
+      </div>
+      <div class="project-preview-stack-username-date">
+        <p class="project-prev-username">Created by:
+          <br/>
+        <a class="project-preview-username" href="/profile/{{project.username}}">{{project.username}}</a>
+        </p>
+        <!-- <p class="project-preview-date">{{project.createdDate}}</p> -->
+        <p class="project-preview-category">{{project.category}}</p>
+      </div>
+    </div>
+  </div>
+</a>
