@@ -15,8 +15,8 @@ export class RootMainComponent implements OnInit {
     if (localStorage.getItem('token') == null) {
       this.router.navigate(['/welcome']);
     }
-    if (localStorage.getItem('currentRoom') == null) {
-      localStorage.setItem('currentRoom', 'Node.js');
-    }
+    // if (localStorage.getItem('currentRoom') == null) {
+    //   localStorage.setItem('currentRoom', 'Node.js');
+    // }
   }
 }

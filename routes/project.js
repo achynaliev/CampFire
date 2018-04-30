@@ -35,7 +35,8 @@ router.post('/', function (req, res, next) {
 });
 
 router.get('/', function(req, res, next) {
-  Project.find({})
+  console.log(req);
+  Project.find()
     .exec(function(err, projects) {
       res.status(200).json({
         message: 'Success',

@@ -9,7 +9,7 @@ import { Project } from "../project.model";
   styleUrls: ['project_index.component.css']
 })
 
-export class ProjectIndexComponent implements OnInit {
+export class ProjectIndexComponent{
   @ContentChild(TemplateRef)
   template: TemplateRef<Project>;
   projects: Project[];
@@ -17,7 +17,7 @@ export class ProjectIndexComponent implements OnInit {
   constructor(private projectIndexService: ProjectIndexService) {}
 
   ngOnInit() {
-    this.projectIndexService.getProjects()
+    this.projectIndexService.getProjects("Node.js")
       .subscribe(
         (projects: Project[]) => {
           console.log(projects);
