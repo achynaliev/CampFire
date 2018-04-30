@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
+import { ProjectIndexService } from "../../projects/project_index/project_index.service.ts";
+import { Project } from "../../projects/project.model";
 
 @Component({
   selector: 'current-room',
@@ -8,11 +10,17 @@ import { Router } from "@angular/router";
 })
 
 export class CurrentRoomComponent implements OnInit {
-  constructor(private router: Router) {}
+  projects: Project[];
 
-  // ngOnInit() {
-  //   if (localStorage.getItem('currentRoom') == null) {
-  //
-  //   }
-  // }
+  constructor(private router: Router, private projectIndexService: ProjectIndexService) {}
+
+  ngOnInit() {
+      this.projectIndexService.getProjects("Node.js")
+        .subscribe(
+          (projects: Project[]) => {
+            console.log(projects);
+            this.projects = projects;
+          }
+        )
+  }
 }
