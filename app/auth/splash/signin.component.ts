@@ -1,8 +1,8 @@
 import { Component } from "@angular/core";
 import { Router } from "@angular/router";
 import { FormGroup, FormControl, Validators } from "@angular/forms";
+import $ from "jquery";
 
-import { User } from "../user.model";
 import { AuthService } from "./auth.service";
 
 @Component({
@@ -15,7 +15,11 @@ export class SigninComponent {
     constructor(private authService: AuthService, private router: Router) {}
 
     onSubmit() {
-        const user = { email: this.myForm.value.email, passwordDigest: this.myForm.value.passwordDigest};
+        const user = { firstName: null,
+          lastName: null,
+          username: null,
+          email: this.myForm.value.email,
+          passwordDigest: this.myForm.value.passwordDigest};
         this.authService.signin(user)
             .subscribe(
                 data => {
