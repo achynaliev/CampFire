@@ -20,7 +20,6 @@ export class ProjectIndexComponent{
     this.projectIndexService.getProjects("Node.js")
       .subscribe(
         (projects: Project[]) => {
-          console.log(projects);
           this.projects = projects;
         }
       )
