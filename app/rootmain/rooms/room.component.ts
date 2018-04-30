@@ -3,7 +3,7 @@ import { Router } from "@angular/router";
 
 import { Room } from "./room.model";
 import { RoomService } from "./room.service";
-import { ProjectIndexService } from "../../projects/project_index/project_index.service.ts";
+import { ProjectIndexService } from "../../projects/project_index/project_index.service";
 import { Project } from "../../projects/project.model";
 
 @Component({
@@ -13,6 +13,7 @@ import { Project } from "../../projects/project.model";
 })
 export class RoomComponent{
     @Input() room: Room;
+    projects: Project[] = [];
 
     constructor(private roomService: RoomService,
                 private router: Router,

@@ -39,7 +39,6 @@ export class EditProfileComponent implements OnInit {
           this.myForm.value.userBio,
           this.currentUser.username,
       );
-      // console.log(profile);
       this.profileService.updateProfile(profile)
           .subscribe(
             data => {
@@ -48,7 +47,6 @@ export class EditProfileComponent implements OnInit {
             error => console.error(error)
           );
       this.myForm.reset();
-      $("div").removeClass("modal-backdrop in")
       location.reload();
   }
 

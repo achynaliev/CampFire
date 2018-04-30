@@ -23,7 +23,7 @@ export class SearchService {
                         result.username
                     ));
                 }
-                this.results = transformedResults;
+                this.searchResults = transformedResults;
                 return transformedResults;
             })
             .catch((error: Response) => Observable.throw(error.json()));

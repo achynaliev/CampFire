@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 
 import { Project } from "../project.model";
+import { ProfileService } from '../../profile/profile.service';
 
 @Component({
   selector: 'project-show',
