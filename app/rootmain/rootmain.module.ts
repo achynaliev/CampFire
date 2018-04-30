@@ -13,7 +13,6 @@ import { RootMainRoutes } from './rootmain.routes';
   imports: [
     CommonModule,
     ProjectsModule,
-    RootMainRoutes,
     SharedModule
   ],
   declarations: [
