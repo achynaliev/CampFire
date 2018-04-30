@@ -21,7 +21,7 @@ export class ProfileComponent implements OnInit {
     private authService: AuthService,
     private profileService: ProfileService,
     private location: Location
-  ) {}
+  ) { }
 
   ngOnInit() {
     this.route.data.subscribe(

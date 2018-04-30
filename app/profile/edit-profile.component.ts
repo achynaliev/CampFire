@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormGroup, FormControl, Validators } from "@angular/forms";
+import { Location } from '@angular/common';
 
 import { ProfileService } from './profile.service';
 import { Profile } from './profile.model';
@@ -17,6 +18,7 @@ export class EditProfileComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
+    private location: Location,
     private profileService: ProfileService,
     private router: Router) {}
 
@@ -37,7 +39,7 @@ export class EditProfileComponent implements OnInit {
           this.myForm.value.userBio,
           this.currentUser.username,
       );
-      console.log(profile);
+      // console.log(profile);
       this.profileService.updateProfile(profile)
           .subscribe(
             data => {
@@ -47,6 +49,7 @@ export class EditProfileComponent implements OnInit {
           );
       this.myForm.reset();
       $("div").removeClass("modal-backdrop in")
+      location.reload();
   }
 
   ngOnInit() {
