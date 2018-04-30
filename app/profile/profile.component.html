@@ -1,6 +1,19 @@
 <div class="profile-page">
   <app-navbar></app-navbar>
   <div class="profile-container container">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+        <li class="breadcrumb-item edit-modal-button"
+        *ngIf="isOwnProfile"
+        routerLinkActive="active"
+        data-toggle="modal"
+        data-target="#editProfileModal">
+          <a>Edit Profile</a>
+        </li>
+      </ol>
+    </nav>
+
     <div class="row">
 
       <div class="col-lg-9 col-md-8">
@@ -60,6 +73,27 @@
       <div class="project"></div>
       <div class="project"></div>
       <div class="project"></div>
+    </div>
+  </div>
+</div>
+
+
+<!-- signupModal -->
+
+<div class="modal fade" id="editProfileModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document" aria-hidden="true">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Edit Profile</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <cf-edit-profile></cf-edit-profile>
+      </div>
+      <div class="modal-footer">
+      </div>
     </div>
   </div>
 </div>
