@@ -11,7 +11,7 @@ import { RootMainModule } from './rootmain/rootmain.module';
 import { ProfileModule } from './profile/profile.module';
 import { SharedModule } from './shared/shared.module';
 
-import { AuthService } from "./auth/splash/auth.service";
+import { AuthenticationService } from "./auth/splash/auth.service";
 import { RoomService } from './rootmain/rooms/room.service';
 import { SearchService } from "./search/search.service";
 import { ProjectIndexService } from "./projects/project_index/project_index.service"
@@ -34,7 +34,7 @@ import { ProjectService } from "./projects/projects.service";
       HttpModule,
     ],
     providers: [
-      AuthService,
+      AuthenticationService,
       RoomService,
       SearchService,
       ProjectService,

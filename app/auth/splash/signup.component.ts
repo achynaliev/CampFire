@@ -3,7 +3,7 @@ import { Router } from "@angular/router";
 import { FormGroup, FormControl, Validators } from "@angular/forms";
 import $ from "jquery";
 
-import { AuthService } from "./auth.service";
+import { AuthenticationService } from "./auth.service";
 import { User } from "../user.model";
 
 @Component({
@@ -13,7 +13,7 @@ import { User } from "../user.model";
 export class SignupComponent implements OnInit {
     myForm: FormGroup;
 
-    constructor(private authService: AuthService, private router: Router) {}
+    constructor(private AuthenticationService: AuthenticationService, private router: Router) {}
 
     onSubmit() {
         const user = new User(
@@ -25,7 +25,7 @@ export class SignupComponent implements OnInit {
             null,
             null,
         );
-        this.authService.signup(user)
+        this.AuthenticationService.signup(user)
             .subscribe(
               data => {
                   localStorage.setItem('token', data.token);

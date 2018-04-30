@@ -7,7 +7,7 @@ var ngw = require('@ngtools/webpack');
 
 module.exports = webpackMerge.smart(commonConfig, {
     entry: {
-        'app': '.app/main.aot.ts'
+        'app': './app/main.aot.ts'
     },
 
     output: {
