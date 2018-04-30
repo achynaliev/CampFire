@@ -20,6 +20,9 @@ import { CurrentRoomComponent } from "./rootmain/currentroom/currentRoom.compone
 import { ProjectIndexComponent } from "./projects/project_index/project_index.component";
 import { ProjectIndexItem } from "./projects/project_index/project_index_item.component";
 import { ProjectIndexService } from "./projects/project_index/project_index.service"
+import { ProjectShowModule } from "./projects/project-show/project-show.module";
+// import { ProjectShowService } from "./projects/project-show/project-show.service";
+
 
 import { SharedModule } from './shared/shared.module';
 
@@ -34,6 +37,7 @@ import { SharedModule } from './shared/shared.module';
       CurrentRoomComponent,
       ProjectIndexItem,
       ProjectIndexComponent
+      // ProjectShowComponent
     ],
     imports: [
       BrowserModule,
@@ -44,8 +48,17 @@ import { SharedModule } from './shared/shared.module';
       ReactiveFormsModule,
       HttpModule,
       ChatModule,
+      ProjectShowModule
     ],
-    providers: [AuthService, RoomService, SearchService, ChatService, ProjectService, ProjectIndexService],
+    providers: [
+      AuthService,
+      RoomService,
+      SearchService,
+      ChatService,
+      ProjectService,
+      ProjectIndexService
+      // ProjectShowService
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule {

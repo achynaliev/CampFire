@@ -18,8 +18,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   ],
   declarations: [
     ChatComponent
-  ],
-  providers: [ChatService]
+  ]
+  // providers: [ChatService]
 })
 
 export class ChatModule {};

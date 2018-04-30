@@ -7,8 +7,36 @@ var Project = require("../models/project");
 var Category = require("../models/category");
 var ObjectId = require('mongoose').Types.ObjectId;
 
+router.param('id', function(req, res, next, id) {
+  Project.find({_id: id}).then(function(project) {
+    if(!project) { return res.sendStatus(404);}
+
+    req.profile = project;
+
+    return next();
+  }).catch(next);
+});
+
+router.get('/:id', function(req, res, next) {
+
+  if(req.profile) {
+    // console.log(req.profile[0]);
+    const projectId = req.profile[0].id;
+    // console.log(projectId);
+    Project.find({ _id: ObjectId(`${projectId}`)}).then(project => {
+      if(!project) {
+        return res.status(401).json({message: 'No project found'});
+      }
+      console.log(project[0]);
+      return res.json(Project.profileJSON(project));
+    });
+  } else {
+    return res.status(401).json({message: 'No project found'});
+  }
+});
+
 router.post('/', function (req, res, next) {
-    console.log(req.body);
+    // console.log(req.body);
     var project = new Project({
         title: req.body.title,
         ownerId: req.body.ownerId,
@@ -34,6 +62,12 @@ router.post('/', function (req, res, next) {
     });
 });
 
+
+// router.put('/:id', function(req, res, next) {
+//   Project.findOne({ _id: req.body.id }).then(project => {
+//     if
+//   })
+// )})
 
 // router.get('/:id', function(req, res, next) {
 //   console.log(req.query.id);
@@ -63,7 +97,6 @@ router.get('/', function(req, res, next) {
       });
     });
 });
-
 
 
 module.exports = router;
