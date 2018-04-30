@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { ChatComponent } from './chat.component';
+import { ChatService } from './chat.service.ts';
 
 export const chatRoutes: Routes = [
   {
@@ -16,6 +17,9 @@ export const chatRoutes: Routes = [
   ],
   exports: [
     RouterModule
+  ],
+  provider: [
+    ChatService
   ]
 })
 
