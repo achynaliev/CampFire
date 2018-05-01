@@ -12,7 +12,7 @@ export class SearchService {
 
     getSearchResults(query) {
         const headers = new Headers({'Content-Type': 'application/json'});
-        return this.http.get('http://localhost:3000/search', {headers: headers, params: {query}})
+        return this.http.get('https://camp-fire.herokuapp.com/search', {headers: headers, params: {query}})
             .map((response: Response) => {
                 const results = response.json().obj;
                 let transformedResults: SearchResult[] = [];
