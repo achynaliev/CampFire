@@ -1,6 +1,6 @@
 import { Component, OnInit, ContentChild, TemplateRef } from "@angular/core";
 
-import { ProjectIndexService } from "./project_index.service.ts";
+import { ProjectIndexService } from "./project_index.service";
 import { Project } from "../project.model";
 
 @Component({

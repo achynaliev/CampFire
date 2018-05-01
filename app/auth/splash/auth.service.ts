@@ -6,7 +6,7 @@ import { Observable } from "rxjs";
 import { User } from "../user.model";
 
 @Injectable()
-export class AuthService {
+export class AuthenticationService {
     constructor(private http: Http) {}
 
     signup(user: User) {

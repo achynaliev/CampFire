@@ -1,9 +1,10 @@
 <header class="rowl">
     <nav class="main-navigation">
         <ul class="main-navigation-list">
-            <li routerLinkActive="active"><a [routerLink]="['/']">Ideas</a></li>
-            <li routerLinkActive="active"><a [routerLink]="['/inteview']">Jobs/Interview</a></li>
+            <li routerLinkActive="active"><a routerLink='/'>Ideas</a></li>
+            <li routerLinkActive="active"><a routerLink='/inteview'>Jobs/Interview</a></li>
         </ul>
     </nav>
 </header>
-<project-index></project-index>
+<!-- this needs to be either a router-outlet or needs to be passed @Input of Project[] -->
+<!-- <project-index></project-index> -->
