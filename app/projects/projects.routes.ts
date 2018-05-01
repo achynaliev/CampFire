@@ -3,13 +3,13 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { ProjectCreationComponent } from './project_creation/project_creation.component';
 
-export const projectRoutes: Routes = [
+export const ProjectRoutes: Routes = [
 
 ];
 
 @NgModule({
   imports: [
-    RouterModule.forChild(projectRoutes)
+    RouterModule.forChild(ProjectRoutes)
   ],
   exports: [
     RouterModule

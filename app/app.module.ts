@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
 
 import { routing } from "./app.routing";
 import { AppComponent } from "./app.component";
-import { ProjectShowContainer } from './projects/project_show/project_show';
+import { ProjectShowComponent } from './projects/project-show/project-show.component';
 import { RootMainModule } from './rootmain/rootmain.module';
 import { ProfileModule } from './profile/profile.module';
 import { SharedModule } from './shared/shared.module';
@@ -20,7 +20,7 @@ import { ProjectService } from "./projects/projects.service";
 @NgModule({
     declarations: [
       AppComponent,
-      ProjectShowContainer
+      ProjectShowComponent
     ],
     imports: [
       CommonModule,
