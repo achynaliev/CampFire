@@ -8,6 +8,9 @@ import { EditProfileComponent } from './edit-profile.component';
 
 import { SharedModule } from '../shared/shared.module';
 
+import { ProfileResolver } from './profile-resolver.service';
+import { ProfileService } from './profile.service';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -19,6 +22,10 @@ import { SharedModule } from '../shared/shared.module';
   declarations: [
     ProfileComponent,
     EditProfileComponent
+  ],
+  providers: [
+    ProfileResolver,
+    ProfileService
   ]
 })
 
