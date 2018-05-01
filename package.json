@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "ng serve",
-    "build": "ng build",
+    "start": "babel-node ./src/index.js",
+    "build": "npm run clean && npm run build-babel",
+    "start": "npm run build && node ./build/index.js",
+    "build-babel": "babel -d ./build ./src -s",
     "build:prod": "del-cli public/js/app && ngc -p tsconfig.aot.json && ngc -p tsconfig.aot.json && webpack --config webpack.config.prod.js --progress --profile --bail && del-cli 'app/**/*.js' 'app/**/*.ngsummary.json' 'app/**/*.ngstyle.*'",
+    "clean": "rm -rf build && mkdir build",
     "postinstall": "ng build"
   },
   "dependencies": {
@@ -23,6 +26,7 @@
     "@angular/router": "^5.0.0",
     "@angular/upgrade": "^5.0.0",
     "angular-route": "^1.6.10",
+    "babel-preset-env": "^1.6.1",
     "bcryptjs": "^2.4.3",
     "body-parser": "~1.15.2",
     "cookie-parser": "~1.4.3",
@@ -51,6 +55,7 @@
     "angular-router-loader": "^0.5.0",
     "angular2-template-loader": "^0.5.0",
     "awesome-typescript-loader": "^3.1.2",
+    "babel-cli": "^6.26.0",
     "del-cli": "^0.2.0",
     "html-loader": "^0.4.4",
     "raw-loader": "^0.5.1",
