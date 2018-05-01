@@ -3,12 +3,14 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon ./bin/www",
-    "build": "del-cli public/js/app && webpack --config webpack.config.dev.js --progress --profile --watch",
-    "build:prod": "del-cli public/js/app && ngc -p tsconfig.aot.json && ngc -p tsconfig.aot.json && webpack --config webpack.config.prod.js --progress --profile --bail && del-cli 'app/**/*.js' 'app/**/*.ngsummary.json' 'app/**/*.ngstyle.*'"
+    "start": "ng serve",
+    "build": "ng build",
+    "build:prod": "del-cli public/js/app && ngc -p tsconfig.aot.json && ngc -p tsconfig.aot.json && webpack --config webpack.config.prod.js --progress --profile --bail && del-cli 'app/**/*.js' 'app/**/*.ngsummary.json' 'app/**/*.ngstyle.*'",
+    "postinstall": "ng build"
   },
   "dependencies": {
     "@angular/animations": "^5.0.0",
+    "@angular/cli": "^1.7.4",
     "@angular/common": "^5.0.0",
     "@angular/compiler": "^5.0.0",
     "@angular/compiler-cli": "^5.0.0",

@@ -18,6 +18,12 @@ var projectRoutes = require('./routes/project');
 var app = express();
 mongoose.connect('mongodb://camper:flex2018@ds161459.mlab.com:61459/campfire');
 
+// Create link to Angular build directory
+var distDir = __dirname + "/dist/";
+app.use(express.static(distDir));
+
+// Rest of server.js code below
+
 // mongoose.Promise = global.Promise;
 // mongoose.connect(mLabKeys.mongoURI, function(err) {
 //  if (err){
