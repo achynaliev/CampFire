@@ -1,4 +1,5 @@
 var path = require('path');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 var webpack = require('webpack');
 var webpackMerge = require('webpack-merge');
@@ -39,7 +40,7 @@ module.exports = webpackMerge.smart(commonConfig, {
       tsConfigPath: './tsconfig.aot.json',
       entryModule: './app/app.module#AppModule'
     }),
-        new webpack.optimize.UglifyJsPlugin({
+        new UglifyJsPlugin({
             sourceMap: false
         })
     ]

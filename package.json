@@ -39,6 +39,7 @@
     "serve-favicon": "^2.3.2",
     "socket.io-client": "^2.1.0",
     "socketio": "^1.0.0",
+    "uglify-js": "^3.3.23",
     "zone.js": "^0.8.5"
   },
   "devDependencies": {
@@ -53,6 +54,7 @@
     "raw-loader": "^0.5.1",
     "ts-loader": "^2.0.3",
     "typescript": "^2.8.3",
+    "uglifyjs-webpack-plugin": "^1.2.5",
     "webpack": "^3.4.1",
     "webpack-merge": "^4.1.0"
   }
