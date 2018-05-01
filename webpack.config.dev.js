@@ -21,7 +21,7 @@ module.exports = webpackMerge(commonConfig, {
                     {loader: 'awesome-typescript-loader', options: {
                         transpileOnly: true
                     }},
-                    {loader: 'angular-router-loader'},
+                    {loader: 'angular2-template-loader'},
                     {loader: 'angular-router-loader'}
                 ]
             }
