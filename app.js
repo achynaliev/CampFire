@@ -24,6 +24,7 @@ mongoose.connect('mongodb://camper:flex2018@ds161459.mlab.com:61459/campfire');
 //    console.error("Error!" + err);
 //  }
 // });
+//
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
