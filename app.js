@@ -16,7 +16,7 @@ var searchRoutes = require('./routes/search');
 var projectRoutes = require('./routes/project');
 
 var app = express();
-mongoose.connect('mongodb://localhost:27017/firecamp');
+mongoose.connect('mongodb://camper:flex2018@ds161459.mlab.com:61459/campfire');
 
 // mongoose.Promise = global.Promise;
 // mongoose.connect(mLabKeys.mongoURI, function(err) {
@@ -24,6 +24,7 @@ mongoose.connect('mongodb://localhost:27017/firecamp');
 //    console.error("Error!" + err);
 //  }
 // });
+//
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

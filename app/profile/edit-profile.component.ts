@@ -29,17 +29,16 @@ export class EditProfileComponent implements OnInit {
           this.currentUser.firstName,
           this.myForm.value.githubLink,
           this.myForm.value.graduation,
-          this.myForm.value.imageUrl,
           this.currentUser.lastName,
           this.myForm.value.linkedInLink,
           this.myForm.value.location,
-          this.currentUser.phone,
           this.myForm.value.profileBackgroundImage,
           this.myForm.value.stack,
-          this.myForm.value.userBio,
           this.currentUser.username,
+          this.myForm.value.imageUrl,
+          this.currentUser.phone,
+          this.myForm.value.userBio,
       );
-      // console.log(profile);
       this.profileService.updateProfile(profile)
           .subscribe(
             data => {
@@ -48,7 +47,6 @@ export class EditProfileComponent implements OnInit {
             error => console.error(error)
           );
       this.myForm.reset();
-      $("div").removeClass("modal-backdrop in")
       location.reload();
   }
 

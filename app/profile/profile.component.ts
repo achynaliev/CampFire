@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 
 import { ProfileService } from './profile.service';
-import { AuthService } from '../auth/splash/auth.service';
+import { AuthenticationService } from '../auth/splash/auth.service';
 import { Profile } from './profile.model';
 
 @Component({
@@ -18,7 +18,7 @@ export class ProfileComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private authService: AuthService,
+    private AuthenticationService: AuthenticationService,
     private profileService: ProfileService,
     private location: Location
   ) { }

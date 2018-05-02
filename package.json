@@ -28,6 +28,7 @@
     "debug": "~2.2.0",
     "express": "~4.14.0",
     "hbs": "~3.1.0",
+    "jquery": "^3.3.1",
     "jsonwebtoken": "^8.2.1",
     "mongoose": "^5.0.15",
     "mongoose-unique-validator": "^2.0.0",
@@ -38,11 +39,12 @@
     "serve-favicon": "^2.3.2",
     "socket.io-client": "^2.1.0",
     "socketio": "^1.0.0",
+    "uglify-js": "^3.3.23",
     "zone.js": "^0.8.5"
   },
   "devDependencies": {
     "@ngtools/webpack": "^1.8.0",
-    "@types/core-js": "0.9.36",
+    "@types/core-js": "0.9.39",
     "@types/node": "^6.0.45",
     "angular-router-loader": "^0.5.0",
     "angular2-template-loader": "^0.5.0",
@@ -52,6 +54,7 @@
     "raw-loader": "^0.5.1",
     "ts-loader": "^2.0.3",
     "typescript": "^2.8.3",
+    "uglifyjs-webpack-plugin": "^1.2.5",
     "webpack": "^3.4.1",
     "webpack-merge": "^4.1.0"
   }

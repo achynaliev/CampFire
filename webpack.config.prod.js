@@ -1,4 +1,5 @@
 var path = require('path');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 var webpack = require('webpack');
 var webpackMerge = require('webpack-merge');
@@ -7,7 +8,7 @@ var ngw = require('@ngtools/webpack');
 
 module.exports = webpackMerge.smart(commonConfig, {
     entry: {
-        'app': '.app/main.aot.ts'
+        'app': './app/main.aot.ts'
     },
 
     output: {
@@ -27,7 +28,7 @@ module.exports = webpackMerge.smart(commonConfig, {
                 test: /\.ts$/,
                 use: [
                     'awesome-typescript-loader',
-                    'angular2-template-loader',
+                    'angular-router-loader',
                     // 'angular-router-loader?aot=true'
                 ]
             }
@@ -39,7 +40,7 @@ module.exports = webpackMerge.smart(commonConfig, {
       tsConfigPath: './tsconfig.aot.json',
       entryModule: './app/app.module#AppModule'
     }),
-        new webpack.optimize.UglifyJsPlugin({
+        new UglifyJsPlugin({
             sourceMap: false
         })
     ]

@@ -2,62 +2,43 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from "@angular/http";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { CommonModule } from '@angular/common';
+
 import { routing } from "./app.routing";
-import { ProfileModule } from './profile/profile.module';
-import { AuthService } from "./auth/splash/auth.service";
-import { RootMainComponent } from "./rootmain/rootmain.component";
-import { RoomListComponent } from './rootmain/rooms/room-list.component';
-import { RoomComponent } from './rootmain/rooms/room.component';
-import { RoomService } from './rootmain/rooms/room.service';
 import { AppComponent } from "./app.component";
-import { SearchService } from "./search/search.service";
-import { ChatService } from "./chat/chat.service";
-import { ChatModule } from "./chat/chat.module";
-import { UserComponent } from "./userContainer/userContainer.component";
-import { ProjectCreationComponent } from "./projects/project_creation/project_creation.component";
-import { ProjectService } from "./projects/projects.service";
-import { CurrentRoomComponent } from "./rootmain/currentroom/currentRoom.component";
-import { ProjectIndexComponent } from "./projects/project_index/project_index.component";
-import { ProjectIndexItem } from "./projects/project_index/project_index_item.component";
-import { ProjectIndexService } from "./projects/project_index/project_index.service"
-import { ProjectShowModule } from "./projects/project-show/project-show.module";
-// import { ProjectShowService } from "./projects/project-show/project-show.service";
-
-
+// import { ProjectShowComponent } from './projects/project-show/project-show.component';
+import { RootMainModule } from './rootmain/rootmain.module';
+import { ProfileModule } from './profile/profile.module';
 import { SharedModule } from './shared/shared.module';
+
+import { AuthenticationService } from "./auth/splash/auth.service";
+import { RoomService } from './rootmain/rooms/room.service';
+import { SearchService } from "./search/search.service";
+import { ProjectIndexService } from "./projects/project_index/project_index.service"
+import { ProjectService } from "./projects/projects.service";
 
 @NgModule({
     declarations: [
       AppComponent,
-      RootMainComponent,
-      RoomListComponent,
-      RoomComponent,
-      UserComponent,
-      ProjectCreationComponent,
-      CurrentRoomComponent,
-      ProjectIndexItem,
-      ProjectIndexComponent
       // ProjectShowComponent
     ],
     imports: [
+      CommonModule,
       BrowserModule,
       FormsModule,
+      RootMainModule,
       ProfileModule,
       SharedModule,
       routing,
       ReactiveFormsModule,
       HttpModule,
-      ChatModule,
-      ProjectShowModule
     ],
     providers: [
-      AuthService,
+      AuthenticationService,
       RoomService,
       SearchService,
-      ChatService,
       ProjectService,
       ProjectIndexService
-      // ProjectShowService
     ],
     bootstrap: [AppComponent]
 })

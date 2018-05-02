@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
-import { ProjectIndexService } from "../../projects/project_index/project_index.service.ts";
+import { ProjectIndexService } from "../../projects/project_index/project_index.service";
 import { Project } from "../../projects/project.model";
 
 @Component({

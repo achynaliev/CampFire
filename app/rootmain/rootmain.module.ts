@@ -1,19 +1,26 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NavbarComponent } from '../navbar/navbar.component';
+
+import { SharedModule } from '../shared/shared.module';
 import { RootMainComponent } from './rootmain.component';
 import { CurrentRoomComponent } from './currentroom/currentRoom.component';
-
-import { RootMainRouting } from './rootmain.routes';
+import { ProjectsModule } from '../projects/projects.module';
+import { UserComponent } from './userContainer/userContainer.component';
+import { RoomListComponent, RoomComponent } from './rooms';
+import { RootMainRoutes } from './rootmain.routes';
 
 @NgModule({
   imports: [
     CommonModule,
-    RootMainRouting,
-    NavbarComponent,
+    ProjectsModule,
+    SharedModule
   ],
   declarations: [
-    RootMainComponent,CurrentRoomComponent
+    RootMainComponent,
+    UserComponent,
+    RoomComponent,
+    RoomListComponent,
+    CurrentRoomComponent
   ]
 })
 
