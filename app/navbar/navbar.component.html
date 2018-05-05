@@ -14,6 +14,7 @@
         </div>
         <div class="collapse navbar-collapse" id="navbar">
             <ul class="nav navbar-nav navbar-right">
+                <li routerLinkActive="active" *ngIf="!isLoggedIn()"><app-demo></app-demo></li>
                 <li routerLinkActive="active" *ngIf="!isLoggedIn()" data-toggle="modal" data-target="#signupModal"><a>Signup</a></li>
                 <li routerLinkActive="active" *ngIf="!isLoggedIn()" data-toggle="modal" data-target="#signinModal"><a>Signin</a></li>
                 <li routerLinkActive="active" *ngIf="isLoggedIn()"><app-logout>Logout</app-logout></li>

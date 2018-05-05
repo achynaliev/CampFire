@@ -8,6 +8,7 @@ import {
   AuthenticationComponent,
   LogoutComponent,
   SigninComponent,
+  DemoComponent,
   SignupComponent } from '../auth/splash';
 
 @NgModule({
@@ -23,7 +24,8 @@ import {
     AuthenticationComponent,
     LogoutComponent,
     SigninComponent,
-    SignupComponent
+    SignupComponent,
+    DemoComponent
   ],
   exports: [
     NavbarComponent,
@@ -32,7 +34,8 @@ import {
     AuthenticationComponent,
     LogoutComponent,
     SigninComponent,
-    SignupComponent
+    SignupComponent,
+    DemoComponent
   ]
 })
 
