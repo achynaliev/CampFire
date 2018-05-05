@@ -18,10 +18,10 @@ router.param('id', function(req, res, next, id) {
 });
 
 router.get('/:id', function(req, res, next) {
+  console.log(req.params);
 
-  if(req.profile) {
-    // console.log(req.profile[0]);
-    const projectId = req.profile[0].id;
+  if(req.params) {
+    const projectId = req.params.id;
     // console.log(projectId);
     Project.find({ _id: ObjectId(`${projectId}`)}).then(project => {
       if(!project) {
@@ -89,6 +89,7 @@ router.post('/', function (req, res, next) {
 // }
 
 router.get('/', function(req, res, next) {
+  console.log("sdfghj");
   Project.find()
     .exec(function(err, projects) {
       res.status(200).json({

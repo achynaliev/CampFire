@@ -11,7 +11,7 @@ export class ProfileService {
 
   getProfile(username: string): Observable<Profile> {
     const headers = new Headers({'Content-Type': 'application/json'});
-    return this.http.get(`https://camp-fire.herokuapp.com/profiles/${username}`, {headers: headers})
+    return this.http.get(`http://localhost:3000/profiles/${username}`, {headers: headers})
         .map((response: Response) => response.json())
         .catch((error: Response) => Observable.throw(error.json()));
   }
@@ -19,7 +19,7 @@ export class ProfileService {
   updateProfile(user: Profile): Observable<Profile> {
     const body = JSON.stringify(user);
     const headers = new Headers({'Content-Type': 'application/json'});
-    return this.http.put(`https://camp-fire.herokuapp.com/profiles/${user.username}`, body, {headers: headers})
+    return this.http.put(`http://localhost:3000/profiles/${user.username}`, body, {headers: headers})
       .map((response: Response) => response.json())
       .catch((error: Response) => Observable.throw(error.json()));
   }

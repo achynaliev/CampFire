@@ -16,7 +16,7 @@ var searchRoutes = require('./routes/search');
 var projectRoutes = require('./routes/project');
 
 var app = express();
-mongoose.connect('mongodb://camper:flex2018@ds161459.mlab.com:61459/campfire');
+mongoose.connect('mongodb://localhost:27017/firecamp');
 
 // mongoose.Promise = global.Promise;
 // mongoose.connect(mLabKeys.mongoURI, function(err) {
@@ -46,7 +46,7 @@ app.use(function(req, res, next) {
   next();
 });
 
-app.use('/project', projectRoutes);
+app.use('/projects', projectRoutes);
 app.use('/search', searchRoutes);
 app.use('/room', roomRoutes);
 app.use('/user', userRoutes);
