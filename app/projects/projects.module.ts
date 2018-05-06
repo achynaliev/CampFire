@@ -16,9 +16,7 @@ import { ProjectIndexItem, ProjectIndexComponent } from './project_index';
     ReactiveFormsModule
   ],
   declarations: [
-    ProjectCreationComponent,
-    ProjectIndexItem,
-    ProjectIndexComponent
+    ProjectCreationComponent
   ]
 })
 

@@ -5,8 +5,8 @@ import { AuthenticationService } from "./auth.service";
 
 @Component({
     selector: 'app-demo',
-    template: `<a style="color: white; font-size: 18px; font-family: 'Montserrat', sans-serif; cursor:
-    pointer; padding-top: 1px; text-decoration: none;" (click)="demo()">DEMO LOGIN</a>`
+    template: `<a (click)="demo()">Demo Login</a>`,
+    styleUrls: ['./demo.component.css']
 })
 export class DemoComponent {
     constructor(private AuthenticationService: AuthenticationService, private router: Router) {}
