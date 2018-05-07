@@ -21,7 +21,7 @@ projectSchema.statics.profileJSON = function(project){
     ownerId: project.ownerId,
     username: project.username,
     createdDate: project.createdDate || new Date,
-    imageUrl: project.imageUrl || "https://cdn.pixabay.com/photo/2018/03/01/09/33/laptop-3190194_1280.jpg",
+    imageUrl: project.imageUrl || "http://cdn.pixabay.com/photo/2018/03/01/09/33/laptop-3190194_1280.jpg",
     fullDescription: project.fullDescription,
     shortDescription: project.shortDescription,
     categoryTitle: project.categoryTitle,

@@ -4,7 +4,7 @@ body {
 
 .header-nightsky {
     color: white;
-    background-image: url(https://images.pexels.com/photos/776113/pexels-photo-776113.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+    background-image: url(http://images.pexels.com/photos/776113/pexels-photo-776113.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
     background-size: cover;
     background-position: 100% -5%;
     padding-bottom: 200px;
@@ -156,14 +156,14 @@ div.modal-header {
 }
 
 .ch-img-1 {
-	background-image: url("https://images.pexels.com/photos/160107/pexels-photo-160107.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+	background-image: url("http://images.pexels.com/photos/160107/pexels-photo-160107.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
   background-repeat: no-repeat;
   background-size: 400px;
   background-position: center;
 }
 
 .ch-img-2 {
-	background-image: url("https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+	background-image: url("http://images.pexels.com/photos/853168/pexels-photo-853168.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
   background-repeat: no-repeat;
   background-size: 400px;
   background-position: center;
@@ -171,7 +171,7 @@ div.modal-header {
 }
 
 .ch-img-3 {
-	background-image: url("https://cdn.pixabay.com/photo/2018/04/06/11/21/people-3295555_1280.jpg");
+	background-image: url("http://cdn.pixabay.com/photo/2018/04/06/11/21/people-3295555_1280.jpg");
   background-repeat: no-repeat;
   background-size: 400px;
   background-position: center;

@@ -38,13 +38,13 @@ Some technical challenges:
 ## Wireframes
 ------
 Splash Page
-![splashPage](https://github.com/achynaliev/CampFire/blob/master/project_files/splashPage.png)
+![splashPage](http://github.com/achynaliev/CampFire/blob/master/project_files/splashPage.png)
 
 Profile Dashboard
-![profileDashboard](https://github.com/achynaliev/CampFire/blob/master/project_files/dashboard.png)
+![profileDashboard](http://github.com/achynaliev/CampFire/blob/master/project_files/dashboard.png)
 
 User Profile
-![userProfile](https://github.com/achynaliev/CampFire/blob/master/project_files/userProfile.png)
+![userProfile](http://github.com/achynaliev/CampFire/blob/master/project_files/userProfile.png)
 
 ## Accomplished over the Weekend
 ------

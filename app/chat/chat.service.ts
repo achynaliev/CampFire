@@ -9,7 +9,7 @@ export class ChatService {
   getChatByRoom(room) {
     const headers = new Headers({'Content-Type': 'application/json'});
     return new Promise((resolve, reject) => {
-      this.http.get('https://camp-fire.herokuapp.com/chat', {headers: headers, params:{room}})
+      this.http.get('http://localhost:3000/chat', {headers: headers, params:{room}})
       .map(res => res.json())
       .subscribe(res => {
         resolve(res);
@@ -23,7 +23,7 @@ export class ChatService {
     const headers = new Headers({'Content-Type': 'application/json'});
     var room = data.room
     return new Promise((resolve, reject) => {
-      this.http.post('https://camp-fire.herokuapp.com/chat', {headers: headers, params: {room}})
+      this.http.post('http://localhost:3000/chat', {headers: headers, params: {room}})
       .map(res => res.json())
       .subscribe(res => {
         resolve(res);
