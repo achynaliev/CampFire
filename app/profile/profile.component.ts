@@ -27,6 +27,7 @@ export class ProfileComponent implements OnInit {
     this.route.data.subscribe(
       (data: {profile: Profile}) => {
         this.profile = data.profile;
+        console.log(data)
       }
     );
     this.canEdit();

@@ -17,7 +17,7 @@ export class ProjectIndexComponent{
   constructor(private projectIndexService: ProjectIndexService) {}
 
   ngOnInit() {
-    this.projectIndexService.getProjects("Node.js")
+    this.projectIndexService.getProjects()
       .subscribe(
         (projects: Project[]) => {
           this.projects = projects;

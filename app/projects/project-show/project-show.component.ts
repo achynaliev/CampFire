@@ -23,7 +23,7 @@ export class ProjectShowComponent implements OnInit {
   ngOnInit() {
     this.route.data.subscribe(
       (data: {project: Project}) => {
-        this.project - data.project;
+        this.project = data.project.obj.filter(obj => obj._id === this.route.snapshot.params.id)[0];
       }
     );
   }
