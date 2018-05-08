@@ -25,6 +25,15 @@ export class AuthenticationService {
             .catch((error: Response) => Observable.throw(error.json()));
     }
 
+    demosignin() {
+      const user = {email : 'cool@cool.com', passwordDigest: "password"};
+      const body = JSON.stringify(user);
+      const headers = new Headers({'Content-Type': 'application/json'});
+      return this.http.post('https://camp-fire.herokuapp.com/user/signin', body, {headers: headers})
+          .map((response: Response) => response.json())
+          .catch((error: Response) => Observable.throw(error.json()));
+    }
+
     logout() {
         localStorage.clear();
     }

@@ -34,7 +34,7 @@ export class ProjectCreationComponent implements OnInit {
           this.myForm.value.imageUrl,
           this.myForm.value.fullDescription,
           this.myForm.value.shortDescription,
-          "AngularJS",
+          "MEAN",
           false
       );
       this.projectService.createProject(project)

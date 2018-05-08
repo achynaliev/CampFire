@@ -14,7 +14,7 @@ export class ProjectIndexService {
   getProjects(categoryTitle) {
     const currentUser = localStorage.getItem('currentUser');
     var user = JSON.parse(currentUser);
-    var body = {categoryTitle: categoryTitle }
+    var body = {categoryTitle: 'MEAN' }
     const headers = new Headers({'Content-Type': 'application/json'});
     return this.http.get('http://localhost:3000/projects', {headers: headers, params: {categoryTitle: categoryTitle}})
       .map((response: Response) => {

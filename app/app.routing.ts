@@ -8,7 +8,7 @@ import { ProjectCreationComponent } from './projects/project_creation/project_cr
 const APP_ROUTES: Routes = [
     { path: '', component: RootMainComponent, children: RootMainRoutes },
     { path: 'welcome', component: AuthenticationComponent, children: AUTH_ROUTES },
-    // { path: 'project/new', component: ProjectCreationComponent}
+    { path: 'new', component: ProjectCreationComponent}
 ];
 
 export const routing = RouterModule.forRoot(APP_ROUTES);
