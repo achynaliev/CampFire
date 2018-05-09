@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
 import { ProjectIndexService } from "../../projects/project_index/project_index.service";
-import { Project } from "../../projects/project.model";
+// import { Project } from "../../projects/project.model";
 
 @Component({
   selector: 'current-room',
@@ -10,17 +10,17 @@ import { Project } from "../../projects/project.model";
 })
 
 export class CurrentRoomComponent implements OnInit {
-  projects: Project[];
+  // projects: Project[];
 
   constructor(private router: Router, private projectIndexService: ProjectIndexService) {}
 
   ngOnInit() {
       // this.projectIndexService.getProjects("Node.js")
-      this.projectIndexService.getProjects()
-        .subscribe(
-          (projects: Project[]) => {
-            this.projects = projects;
-          }
-        )
+      // this.projectIndexService.getProjects()
+      //   .subscribe(
+      //     (projects: Project[]) => {
+      //       this.projects = projects;
+      //     }
+      //   )
   }
 }

@@ -3,21 +3,22 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { RootMainComponent } from './rootmain.component';
 import { RoomListComponent } from './rooms/room-list.component';
-import { ProjectIndexComponent } from '../projects/project_index/project_index.component';
+// import { ProjectIndexComponent } from '../projects/project_index/project_index.component';
 
 export const RootMainRoutes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   {
     path: 'dashboard',
     component: RootMainComponent,
-    children: [
-      {
-        path: ':categoryTitle',
-        component: ProjectIndexComponent,
-      }
-    ]
+    // children: [
+    //   {
+    //     path: ':categoryTitle',
+    //     component: ProjectIndexComponent,
+    //   }
+    // ]
   },
-  { path: 'room', component: RoomListComponent}
+  // this is a backend route to see all rooms
+  // { path: 'room', component: RoomListComponent}
 ];
 
 @NgModule({

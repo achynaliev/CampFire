@@ -8,7 +8,7 @@ import { ProjectsModule } from '../projects/projects.module';
 import { UserComponent } from './userContainer/userContainer.component';
 import { RoomListComponent, RoomComponent } from './rooms';
 import { RootMainRoutes } from './rootmain.routes';
-import { ProjectIndexItem, ProjectIndexComponent } from '../projects/project_index';
+// import { ProjectIndexItem, ProjectIndexComponent } from '../projects/project_index';
 
 @NgModule({
   imports: [
@@ -22,8 +22,8 @@ import { ProjectIndexItem, ProjectIndexComponent } from '../projects/project_ind
     RoomComponent,
     RoomListComponent,
     CurrentRoomComponent,
-    ProjectIndexComponent,
-    ProjectIndexItem
+    // ProjectIndexComponent,
+    // ProjectIndexItem
   ]
 })
 
