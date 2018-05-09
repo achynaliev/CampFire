@@ -99,5 +99,15 @@ router.get('/', function(req, res, next) {
     });
 });
 
+router.get('/:categoryTitle', function(req, res, next) {
+  Project.find({"categoryTitle": req.params.categoryTitle})
+    .exec(function(err, projects) {
+      res.status(200).json({
+        message: 'Successfully find projects category',
+        obj: projects
+      });
+    });
+})
+
 
 module.exports = router;

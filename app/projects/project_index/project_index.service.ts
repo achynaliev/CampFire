@@ -41,4 +41,30 @@ export class ProjectIndexService {
       })
       .catch((error: Response) => Observable.throw(error.json()));
   }
+
+  getProjectsByCategory(categoryTitle: string) {
+    const headers = new Headers({'Content-Type': 'application/json'});
+    return this.http.get(`https://camp-fire.herokuapp.com/projects/${categoryTitle}`, {headers: headers})
+      .map((response: Response) => {
+        const projects = response.json().obj;
+        let transformedProjects: Project[] = [];
+        for (let project of projects) {
+          transformedProjects.push(new Project(
+            project.title,
+            project.ownerId,
+            project.username,
+            project.createdDate,
+            project.imageUrl,
+            project.fullDescription,
+            project.shortDescription,
+            project.category,
+            project.done,
+            project._id
+          ));
+        }
+        this.projects = transformedProjects;
+        return transformedProjects;
+      })
+      .catch((error: Response) => Observable.throw(error.json()));
+  }
 }

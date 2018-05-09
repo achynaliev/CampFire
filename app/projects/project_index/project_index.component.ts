@@ -1,4 +1,5 @@
 import { Component, OnInit, ContentChild, TemplateRef } from "@angular/core";
+import { ActivatedRoute } from '@angular/router';
 
 import { ProjectIndexService } from "./project_index.service";
 import { Project } from "../project.model";
@@ -9,19 +10,23 @@ import { Project } from "../project.model";
   styleUrls: ['project_index.component.css']
 })
 
-export class ProjectIndexComponent{
+export class ProjectIndexComponent implements OnInit {
   @ContentChild(TemplateRef)
   template: TemplateRef<Project>;
   projects: Project[];
 
-  constructor(private projectIndexService: ProjectIndexService) {}
+  constructor(
+    private projectIndexService: ProjectIndexService,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit() {
-    this.projectIndexService.getProjects()
-      .subscribe(
-        (projects: Project[]) => {
-          this.projects = projects;
-        }
-      )
+    this.projects = this.route.snapshot.data['categoryTitle'];
+    // this.projectIndexService.getProjects()
+    //   .subscribe(
+    //     (projects: Project[]) => {
+    //       this.projects = projects;
+    //     }
+    //   )
   }
 }
