@@ -15,7 +15,8 @@ export class CurrentRoomComponent implements OnInit {
   constructor(private router: Router, private projectIndexService: ProjectIndexService) {}
 
   ngOnInit() {
-      this.projectIndexService.getProjects("Node.js")
+      // this.projectIndexService.getProjects("Node.js")
+      this.projectIndexService.getProjects()
         .subscribe(
           (projects: Project[]) => {
             this.projects = projects;

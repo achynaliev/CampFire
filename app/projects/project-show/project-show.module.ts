@@ -2,9 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { ProjectShowComponent } from './project-show.component.ts';
-import { ProjectShowService } from './project-show.service.ts';
-import { ProjectShowRoutingModule } from './project-show-routing.module.ts';
+import { ProjectShowComponent } from './project-show.component';
+import { ProjectShowService } from './project-show.service';
+import { ProjectShowRoutingModule } from './project-show-routing.module';
 // import { EditProjectComponent } from './edit-project.component';
 
 import { SharedModule } from '../../shared/shared.module';

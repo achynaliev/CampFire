@@ -20,7 +20,8 @@ export class RoomComponent{
                 private projectIndexService: ProjectIndexService) {}
 
     ChangeRoom() {
-      this.projectIndexService.getProjects(this.room.title)
+      // this.projectIndexService.getProjects(this.room.title)
+      this.projectIndexService.getProjects()
         .subscribe(
           (projects: Project[]) => {
             this.projects = projects;

@@ -11,12 +11,14 @@ export class ProjectIndexService {
 
   constructor(private http: Http) { }
 
-  getProjects(categoryTitle) {
+  // getProjects(categoryTitle) {
+  getProjects() {
     const currentUser = localStorage.getItem('currentUser');
     var user = JSON.parse(currentUser);
     var body = {categoryTitle: 'MEAN' }
     const headers = new Headers({'Content-Type': 'application/json'});
-    return this.http.get('http://localhost:3000/projects', {headers: headers, params: {categoryTitle: categoryTitle}})
+    // return this.http.get('http://localhost:3000/projects', {headers: headers, params: {categoryTitle: categoryTitle}})
+    return this.http.get('http://localhost:3000/projects', {headers: headers})
       .map((response: Response) => {
         const projects = response.json().obj;
         let transformedProjects: Project[] = [];

@@ -15,7 +15,7 @@ export class ProjectShowService {
     return this.http.get(`http://localhost:3000/projects`, {headers: headers, params: {id: id}})
       .map((response: Response) => response.json())
       .catch((error: Response) => Observable.throw(error.json()));
-      console.log(response)
+      // console.log(response)
   }
 
   // updateProject(project: Project): Observable<Project> {

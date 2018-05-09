@@ -22,6 +22,6 @@ export class ProjectShowResolver implements Resolve<Project> {
     state: RouterStateSnapshot
   ): Observable<any> {
     return this.projectShowService.getProject(route.params['id'])
-      .catch((err) => this.router.navigateByUrls('/'))
+      .catch((err) => this.router.navigateByUrl('/'))
   }
 }
