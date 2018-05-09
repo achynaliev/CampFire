@@ -12,7 +12,7 @@ export class ProjectShowService {
   getProject(id): Observable<Project> {
     const headers = new Headers({'Content-type': 'application/json'});
 
-    return this.http.get(`http://camp-fire.herokuapp.com/projects`, {headers: headers, params: {id: id}})
+    return this.http.get(`https://camp-fire.herokuapp.com/projects`, {headers: headers, params: {id: id}})
       .map((response: Response) => response.json())
       .catch((error: Response) => Observable.throw(error.json()));
       // console.log(response)

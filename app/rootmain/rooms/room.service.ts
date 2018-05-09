@@ -14,7 +14,7 @@ export class RoomService {
         const currentUser = localStorage.getItem('currentUser');
         var user = JSON.parse(currentUser);
         const headers = new Headers({'Content-Type': 'application/json'});
-        return this.http.get('http://camp-fire.herokuapp.com/room')
+        return this.http.get('https://camp-fire.herokuapp.com/room')
             .map((response: Response) => {
                 const rooms = response.json().obj;
                 let transformedMessages: Room[] = [];
