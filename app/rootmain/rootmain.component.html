@@ -1,18 +1,20 @@
 <div class="main-page-parent-div">
-    <section class="user-stats-rooms-list">
-      <div class="user-stats">
-        <app-user-container></app-user-container>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-2" style="padding: 0px;">
+        <section class="user-stats-rooms-list">
+          <div class="user-stats">
+            <app-user-container></app-user-container>
+          </div>
+          <div class="rooms-list">
+            <app-room-list></app-room-list>
+          </div>
+        </section>
       </div>
-      <div class="rooms-list">
-        <app-room-list></app-room-list>
-      </div>
-    </section>
-    <section class="main-page-body">
-      <div class="main-nav-bar">
+      <div class="col-sm-10" style="padding: 0px;">
         <app-navbar></app-navbar>
-      </div>
-      <div class="chats-main">
         <current-room></current-room>
       </div>
-    </section>
+    </div>
   </div>
+</div>

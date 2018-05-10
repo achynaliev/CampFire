@@ -1,4 +1,21 @@
-<div>
-  Project Show Here
-  {{project.title}}
+<div class="project-show">
+  <app-navbar></app-navbar>
+
+  <div class="project-show-container">
+    <div class="panel panel-default">
+      <div class="project-show-image" [style.background-image]="'url(' + project.imageUrl + ')'"></div>
+    </div>
+    <div class="project-show-overview">
+      <h1 class="project-show-title">{{project.title}}</h1>
+      <div class="project-show-username-date">
+        <p class="project-show-username">Created by:
+          <br/>
+        <a class="project-show-username" href="/profile/{{project.username}}">{{project.username}}</a>
+        </p>
+      </div>
+    </div>
+    <div class="project-show-description">
+      {{project.fullDescription}}
+    </div>
+  </div>
 </div>

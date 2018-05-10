@@ -1,0 +1,35 @@
+.project-show {
+  background-color: #fafafa;
+  min-height: 100vw;
+}
+.project-show-image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50vh;
+}
+
+.project-show-image-container {
+
+}
+
+.project-show-overview {
+  padding-top: 2px;
+  padding-left: 10px;
+  width: 100%;
+  color: black;
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+.project-show-title {
+  font-size: 20px;
+}
+
+.project-show-username {
+  padding-right: 20px;
+}
+
+.project-show-description {
+  padding: 20px 10px 20px 10px;
+}
