@@ -10,7 +10,7 @@ import { AppComponent } from "./app.component";
 import { RootMainModule } from './rootmain/rootmain.module';
 import { ProfileModule } from './profile/profile.module';
 import { SharedModule } from './shared/shared.module';
-import { ProjectShowModule } from "./projects/project-show/project-show.module";
+// import { ProjectShowModule } from "./projects/project-show/project-show.module";
 import { AuthenticationService } from "./auth/splash/auth.service";
 import { RoomService } from './rootmain/rooms/room.service';
 import { SearchService } from "./search/search.service";
@@ -32,7 +32,7 @@ import { ProjectService } from "./projects/projects.service";
       routing,
       ReactiveFormsModule,
       HttpModule,
-      ProjectShowModule
+      // ProjectShowModule
     ],
     providers: [
       AuthenticationService,

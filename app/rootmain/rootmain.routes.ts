@@ -10,6 +10,7 @@ export const RootMainRoutes: Routes = [
   {
     path: 'dashboard',
     component: RootMainComponent,
+    // loadChildren: '../projects/projects.module#ProjectsModule'
     // children: [
     //   {
     //     path: ':categoryTitle',
