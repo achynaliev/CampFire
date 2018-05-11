@@ -99,7 +99,17 @@ router.get('/', function(req, res, next) {
     });
 });
 
+router.param('categoryTitle', function(req, res, next, id) {
+  Project.find({"categoryTitle": req.params.categoryTitle}).then(function(project) {
+    if(!project) { return res.sendStatus(404);}
+    req.project = project;
+
+    return next();
+  }).catch(next);
+});
+
 router.get('/:categoryTitle', function(req, res, next) {
+  console.log(req)
   Project.find({"categoryTitle": req.params.categoryTitle})
     .exec(function(err, projects) {
       res.status(200).json({
@@ -107,7 +117,7 @@ router.get('/:categoryTitle', function(req, res, next) {
         obj: projects
       });
     });
-})
+});
 
 
 module.exports = router;

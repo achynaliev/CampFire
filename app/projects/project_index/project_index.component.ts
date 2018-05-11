@@ -22,7 +22,6 @@ export class ProjectIndexComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    debugger
     // console.log(this.route.snapshot);
     let category = this.route.snapshot.paramMap.get('categoryTitle');
     this.projectIndexService.getProjectsByCategory(category)

@@ -5,7 +5,7 @@ import { CommonModule } from '@angular/common';
 // import { SharedModule } from '../shared/shared.module';
 // import { ProjectCreationComponent } from './project_creation/project_creation.component';
 import { ProjectRoutingModule } from './projects.routes';
-// import { ProjectIndexItem, ProjectIndexComponent } from './project_index/';
+import { ProjectIndexItem, ProjectIndexComponent } from './project_index/';
 import { DummyComponent } from '../dummy.component';
 
 @NgModule({
@@ -18,8 +18,8 @@ import { DummyComponent } from '../dummy.component';
   ],
   declarations: [
     // ProjectCreationComponent,
-    // ProjectIndexComponent,
-    // ProjectIndexItem,
+    ProjectIndexComponent,
+    ProjectIndexItem,
     DummyComponent
   ]
 })
