@@ -14,6 +14,7 @@ var roomRoutes = require('./routes/room');
 var profileRoutes = require('./routes/profile');
 var searchRoutes = require('./routes/search');
 var projectRoutes = require('./routes/project');
+var projectIndexRoutes = require('./routes/project_index');
 
 var app = express();
 mongoose.connect('mongodb://localhost:27017/firecamp');
@@ -47,6 +48,7 @@ app.use(function(req, res, next) {
   next();
 });
 
+app.use('/index', projectIndexRoutes);
 app.use('/projects', projectRoutes);
 app.use('/search', searchRoutes);
 app.use('/room', roomRoutes);
