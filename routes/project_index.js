@@ -18,8 +18,8 @@ router.param('categorytitle', function(req, res, next, id) {
 });
 
 router.get('/categorytitle', function(req, res, next) {
-  console.log(req)
-  Project.find({"categoryTitle": req.params.categoryTitle})
+  console.log(req.query.title)
+  Project.find({"categoryTitle": req.query.title})
     .exec(function(err, projects) {
       res.status(200).json({
         message: 'Successfully find projects category',

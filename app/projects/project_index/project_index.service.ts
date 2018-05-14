@@ -47,7 +47,7 @@ export class ProjectIndexService {
     console.log('lalalala')
     // return this.http.get(`http://localhost:3000/projects/categoryTitle`, {headers: headers, params: { title: categoryTitle}})
     // return this.http.get(`https://camp-fire.herokuapp.com/projects/${categoryTitle}`, {headers: headers})
-    return this.http.get(`http://localhost:3000/index/categorytitle`, {headers: headers})
+    return this.http.get(`http://localhost:3000/index/categorytitle`, {headers: headers, params: { title: categoryTitle}})
       .map((response: Response) => {
         const projects = response.json().obj;
         let transformedProjects: Project[] = [];
