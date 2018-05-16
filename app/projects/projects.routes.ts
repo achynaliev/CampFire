@@ -7,6 +7,7 @@ import { ProjectsResolver } from './projects-resolver.service';
 // import { DummyComponent } from '../dummy.component';
 
 export const ProjectRoutes: Routes = [
+  { path: '', redirectTo: 'category/MEAN', pathMatch: 'full' },
   {
     path: 'category/:categoryTitle',
     component: ProjectIndexComponent,

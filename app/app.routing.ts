@@ -6,7 +6,8 @@ import { RootMainRoutes } from "./rootmain/rootmain.routes";
 // import { ProjectCreationComponent } from './projects/project_creation/project_creation.component';
 
 const APP_ROUTES: Routes = [
-    { path: '', component: RootMainComponent, children: RootMainRoutes },
+    { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+    { path: 'dashboard', component: RootMainComponent, children: RootMainRoutes },
     { path: 'welcome', component: AuthenticationComponent, children: AUTH_ROUTES },
     // { path: 'new', component: ProjectCreationComponent}
 ];

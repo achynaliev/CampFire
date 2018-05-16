@@ -4,7 +4,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { RootMainComponent } from './rootmain.component';
 
 export const RootMainRoutes: Routes = [
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   {
     path: 'dashboard',
     component: RootMainComponent,

@@ -11,7 +11,6 @@ export class ProjectIndexService {
 
   constructor(private http: Http) { }
 
-  // getProjects(categoryTitle) {
   getProjects() {
     const currentUser = localStorage.getItem('currentUser');
     var user = JSON.parse(currentUser);
