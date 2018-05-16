@@ -3,13 +3,16 @@ import { Routes, RouterModule } from '@angular/router';
 
 // import { ProjectCreationComponent } from './project_creation/project_creation.component';
 import { ProjectIndexComponent } from './project_index/';
+import { ProjectsResolver } from './projects-resolver.service';
 // import { DummyComponent } from '../dummy.component';
 
 export const ProjectRoutes: Routes = [
   {
     path: 'category/:categoryTitle',
     component: ProjectIndexComponent,
-
+    resolve: {
+      projects: ProjectsResolver
+    }
   }
   // { path: '', component: DummyComponent }
 ];
@@ -20,6 +23,9 @@ export const ProjectRoutes: Routes = [
   ],
   exports: [
     RouterModule
+  ],
+  providers: [
+    ProjectsResolver
   ]
 })
 

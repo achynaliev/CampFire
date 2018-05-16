@@ -44,7 +44,7 @@ export class ProjectIndexService {
 
   getProjectsByCategory(categoryTitle: string) {
     const headers = new Headers({'Content-Type': 'application/json'});
-    console.log('lalalala')
+    console.log(categoryTitle)
     // return this.http.get(`http://localhost:3000/projects/categoryTitle`, {headers: headers, params: { title: categoryTitle}})
     // return this.http.get(`https://camp-fire.herokuapp.com/projects/${categoryTitle}`, {headers: headers})
     return this.http.get(`http://localhost:3000/index/categorytitle`, {headers: headers, params: { title: categoryTitle}})
