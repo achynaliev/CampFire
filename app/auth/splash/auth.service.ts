@@ -12,7 +12,7 @@ export class AuthenticationService {
     signup(user: User) {
         const body = JSON.stringify(user);
         const headers = new Headers({'Content-Type': 'application/json'});
-        return this.http.post('http://localhost:3000/user', body, {headers: headers})
+        return this.http.post('https://camp-fire.herokuapp.com/user', body, {headers: headers})
             .map((response: Response) => response.json())
             .catch((error: Response) => Observable.throw(error.json()));
     }
@@ -20,7 +20,7 @@ export class AuthenticationService {
     signin(user: User) {
         const body = JSON.stringify(user);
         const headers = new Headers({'Content-Type': 'application/json'});
-        return this.http.post('http://localhost:3000/user/signin', body, {headers: headers})
+        return this.http.post('https://camp-fire.herokuapp.com/user/signin', body, {headers: headers})
             .map((response: Response) => response.json())
             .catch((error: Response) => Observable.throw(error.json()));
     }
@@ -29,7 +29,7 @@ export class AuthenticationService {
       const user = {email : 'cool@cool.com', passwordDigest: "password"};
       const body = JSON.stringify(user);
       const headers = new Headers({'Content-Type': 'application/json'});
-      return this.http.post('http://camp-fire.herokuapp.com/user/signin', body, {headers: headers})
+      return this.http.post('https://camp-fire.herokuapp.com/user/signin', body, {headers: headers})
           .map((response: Response) => response.json())
           .catch((error: Response) => Observable.throw(error.json()));
     }

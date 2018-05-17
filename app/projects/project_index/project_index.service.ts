@@ -17,8 +17,8 @@ export class ProjectIndexService {
     var user = JSON.parse(currentUser);
     var body = {categoryTitle: 'MEAN' }
     const headers = new Headers({'Content-Type': 'application/json'});
-    // return this.http.get('http://localhost:3000/projects', {headers: headers, params: {categoryTitle: categoryTitle}})
-    return this.http.get('http://localhost:3000/projects', {headers: headers})
+    // return this.http.get('https://camp-fire.herokuapp.com/projects', {headers: headers, params: {categoryTitle: categoryTitle}})
+    return this.http.get('https://camp-fire.herokuapp.com/projects', {headers: headers})
       .map((response: Response) => {
         const projects = response.json().obj;
         let transformedProjects: Project[] = [];
