@@ -16,6 +16,7 @@ import { RoomService } from './rootmain/rooms/room.service';
 import { SearchService } from "./search/search.service";
 import { ProjectIndexService } from "./projects/project_index/project_index.service"
 import { ProjectService } from "./projects/projects.service";
+import { ProjectsModule } from "./projects/projects.module";
 
 @NgModule({
     declarations: [
@@ -27,6 +28,7 @@ import { ProjectService } from "./projects/projects.service";
       BrowserModule,
       FormsModule,
       RootMainModule,
+      ProjectsModule,
       ProfileModule,
       SharedModule,
       routing,

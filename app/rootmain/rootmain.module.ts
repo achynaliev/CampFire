@@ -7,12 +7,14 @@ import { CurrentRoomComponent } from './currentroom/currentRoom.component';
 import { UserComponent } from './userContainer/userContainer.component';
 import { RoomListComponent, RoomComponent } from './rooms';
 import { RootMainRoutingModule } from './rootmain.routes';
+import { ProjectsModule } from "../projects/projects.module";
 
 @NgModule({
   imports: [
     CommonModule,
     RootMainRoutingModule,
-    SharedModule
+    SharedModule,
+    ProjectsModule
   ],
   declarations: [
     RootMainComponent,
