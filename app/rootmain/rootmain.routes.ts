@@ -7,7 +7,7 @@ export const RootMainRoutes: Routes = [
   {
     path: 'dashboard',
     component: RootMainComponent,
-    loadChildren: 'app/projects/projects.module#ProjectsModule'
+    loadChildren: '../projects/projects.module#ProjectsModule'
   },
   // this is a backend route to see all rooms
   // { path: 'room', component: RoomListComponent}
