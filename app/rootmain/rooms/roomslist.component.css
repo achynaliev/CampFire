@@ -5,3 +5,7 @@
   height: 100vh;
   color: black;
 }
+
+.rooms {
+  border-bottom: solid black 0.3px;
+}

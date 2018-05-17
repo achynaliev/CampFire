@@ -1,45 +1,12 @@
-/* navbar */
-
 .navbar-toggle {
   /* margin-right: 70px !important; */
 }
 
-
-/* __________________ */
-
 .main-page-parent-div {
   width: 100vw;
-  height: 100vh;
   background-color: #D8DEE3;
 }
 
-/* .user-stats-rooms-list {
-  display: flex;
-  flex-direction: column;
-  min-width: 180px;
-  width: 15%;
-  height: 100vw;
-  border-right: solid gray 0.5px;
-} */
-
-/* .user-stats {
-  width: 100%;
-  border-bottom: solid gray 0.5px;
-} */
-
-/* .rooms-list {
-  width: 100%;
-  height: inherit;
-  border-right: solid gray 0.5px;
-} */
-
-
-/* .main-page-body {
-  display: flex;
-  flex-direction: column;
-  width: 90%;
-} */
-
-/* .chats-main { */
-  /* background-color: #D8DEE3; */
-/* } */
+.rooms-list {
+  height: 100%;
+}

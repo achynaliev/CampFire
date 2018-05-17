@@ -1,10 +1,18 @@
-<header class="rowl">
+<div class="something">
     <nav class="main-navigation">
-        <ul class="main-navigation-list">
-            <li routerLinkActive="active"><a routerLink='/'>Ideas</a></li>
-            <li routerLinkActive="active"><a routerLink='/inteview'>Jobs/Interview</a></li>
-        </ul>
+      <div class="container-fluid">
+        <div class="row">
+          <ul class="main-navigation-list">
+            <div class="col-sm-5">
+              <li routerLinkActive="active"><a routerLink='/'>Ideas</a></li>
+            </div>
+            <div class="col-sm-5">
+              <li routerLinkActive="active"><a routerLink='/inteview'>Jobs/Interview</a></li>
+            </div>
+          </ul>
+        </div>
+      </div>
     </nav>
-</header>
+</div>
 <!-- this needs to be either a router-outlet or needs to be passed @Input of Project[] -->
 <project-index></project-index>

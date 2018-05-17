@@ -9,7 +9,8 @@ import { Room } from "./room.model";
     <div class="rooms-list-index">
       <app-room
           [room]="room"
-          *ngFor="let room of rooms"></app-room>
+          *ngFor="let room of rooms"
+          class="rooms"></app-room>
     </div>
     `,
     styleUrls: ['./roomslist.component.css']
