@@ -10,7 +10,7 @@ export class ProjectService {
       const body = JSON.stringify(project);
       console.log(body)
       const headers = new Headers({'Content-Type': 'application/json'});
-      return this.http.post('https://camp-fire.herokuapp.com/project', body, {headers: headers})
+      return this.http.post('http://localhost:3000/project', body, {headers: headers})
           .map((response: Response) => response.json())
           .catch((error: Response) => Observable.throw(error.json()));
   }
